@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2023-03-10T17:23:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/hugo/</loc>
+    <lastmod>2023-03-10T17:23:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2023-03-10T17:23:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/two-post/</loc>
+    <lastmod>2023-03-10T17:23:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2023-03-10T17:23:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2023-03-10T13:58:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,35 +44,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2023-03-09T23:55:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/first-post/</loc>
-    <lastmod>2023-03-09T23:55:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/hugo/</loc>
-    <lastmod>2023-03-09T23:55:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2023-03-09T23:55:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2023-03-09T23:55:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
