@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从零开始搭建个人博客之hugo部署Vercel - 小陈的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="陈" /><meta name="description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="从零开始搭建个人博客之hugo部署Vercel" />
+<meta property="og:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-03-10T21:40:24+08:00" />
+<meta property="article:modified_time" content="2023-03-10T21:40:24+08:00" />
+
+<meta itemprop="name" content="从零开始搭建个人博客之hugo部署Vercel">
+<meta itemprop="description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug"><meta itemprop="datePublished" content="2023-03-10T21:40:24+08:00" />
+<meta itemprop="dateModified" content="2023-03-10T21:40:24+08:00" />
+<meta itemprop="wordCount" content="1968">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从零开始搭建个人博客之hugo部署Vercel"/>
+<meta name="twitter:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">小陈的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">小陈的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从零开始搭建个人博客之hugo部署Vercel</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-03-10 </span>
+        <div class="post-category">
+            <a href="/categories/hugo/"> hugo </a>
+            </div>
+          <span class="more-meta"> 约 1968 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#整体流程">整体流程</a></li>
+        <li><a href="#具体流程">具体流程</a>
+          <ul>
+            <li><a href="#部署到vercel">部署到Vercel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<p><a href="https://gohugo.io/">Hugo</a>是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hugo使用Go语言编写，因此它非常快。Hugo的主要优点是构建速度非常快，因为它是一个静态网站生成器，没有必要运行数据库或其他服务。
+使用Hugo创建个人博客的主要优势在于它非常快速、易于配置，并且生成的网站可以直接部署到任何Web服务器上，而不需要运行数据库或其他服务。此外，Hugo提供了大量的主题和插件，可以轻松地自定义您的个人博客。它还支持各种文本格式，包括Markdown，AsciiDoc和Org-mode，以及多种语言，包括中文。</p>
+<h2 id="整体流程">整体流程</h2>
+<ol>
+<li>写Markdown文件；</li>
+<li>通过hugo架构提供的语法将Markdown文件编译成html文件，html文件就是在浏览器中可以展示的文件</li>
+<li>把编译出来的html文件发布到服务器或者网站托管平台
+我们可以通过上面的三步生成一个只属于自己的个人博客，是不是非常的简单呢，那么，跟着我一起来使用hugo搭建一个属于自己的个人博客吧。</li>
+</ol>
+<h2 id="具体流程">具体流程</h2>
+<p>在上一篇文章中，我们已经将hugo博客部署到Github Pages中了，这一篇博客中我们来将博客部署到Vercel平台，这时可能会有人感到疑惑了，为什么弄到了GItHub Pages中还要再弄到Vercel中，这是因为github pages在国内有时候会访问不上，并且如果你想要让百度这一类的搜索引擎将你的博客收录的话，必须再弄一个托管平台，因为Github禁止百度抓取网页，那么什么是Vercel，Vercel的优势又是什么呢。
+<a href="https://vercel.com/">Vercel</a>是一个创建高性能网站和应用程序的现代平台。它支持许多编程语言和框架，并提供了许多工具和服务来简化Web开发过程。Vercel的主要优势是快速部署和构建，自动缩放，安全性高，集成了很多有用的功能，如自动SSL和CDN。
+使用Vercel可以快速部署您的Hugo博客并获得许多有用的功能。例如，它提供了自动SSL，自动缩放和全球CDN，可以让您的网站访问速度更快，并提供更好的安全性。此外，您还可以获得有用的分析和监控工具，以了解您的网站的性能和使用情况。并且Vercel还支持一键导入Github、GItlab，十分的方便。</p>
+<h3 id="部署到vercel">部署到Vercel</h3>
+<h4 id="目标代码托管到vercel">目标代码托管到Vercel</h4>
+<p>首先第一步，注册一个Vercel账号，这里我们直接使用github账号登录，因为这样方便导入仓库
+第二步，新建一个项目
+<img src="/img/img3/image1.png" alt="图片">
+导入git仓库，可以选择导入所有仓库
+<img src="/img/img3/image2.png" alt="图片">
+选择目标文件仓库，点击Import
+<img src="/img/img3/image3.png" alt="图片">
+FRAMEWORK PRESET 选Other (因为目标文件是没有框架的)，查看无误之后点击Deploy
+<img src="/img/img3/image4.png" alt="图片">
+点击Deploy之后需要等待一下，因为它会自动检查有没有存在错误，如果没有存在错误，你就可以看到彩带烟花！
+<img src="/img/img3/image5.png" alt="图片">
+至此，我们就完成了将目标代码托管到Vercel的操作，当然我们也可以将源代码也托管给Vercel一份，操作也是十分的简单。</p>
+<h4 id="源文件托管vercel">源文件托管vercel</h4>
+<p>源码托管需要注意几点：
+源代码需要发布到Github上。
+public目录不能发布。（添加到 .gitignore上）
+主题如果是从github下载下来的，子目录里面会有 <code>.git</code> 文件，发布代码的话，内层目录是不能有<code>.git</code>的，它会识别成另一个git仓库并忽略上传，只上传一个软链接文件。所以需要删除themes主题下面的<code>.git</code>文件，否则 Vercel 无法从 github上拉取到主题，编译会失败。
+前面的步骤是一样的，同样的选择创建新项目，选择自己需要导入的项目仓库。
+<img src="/img/img3/image6.png" alt="图片">
+但是里面的设置存在差异，需要我们更改一些地方。
+<img src="/img/img3/image7.png" alt="图片">
+如果在构建当中出现问题，解决方法如下：
+当我们看到这个的时候，
+<img src="/img/img3/image8.png" alt="图片">
+就说明我们的主题是没有发布到自己的Github中的，只是一个软链接，所以需要我们去themes目录，如果还是没有变动需要提交，重命名even提交，然后再改回来，就可以正常提交了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">到根目录（/Document/qichenxiaoni）
+rm -rf .git
+进入themes文件夹 
+mv even even1 
+git status 
+git add * 
+git commit -m &#34;mv&#34; 
+git push 
+
+mv even1 even 
+git status 
+git add * 
+git commit -m &#34;mv&#34; git push
+</code></pre></td></tr></table>
+</div>
+</div><p>如果出现以下问题，是因为public文件已经存在，Vercel没有办法编译成目标文件，需要我们将public删除并忽略public文件提交到Github中。
+<img src="/img/img3/image9.png" alt="图片"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mv public public2 
+git add public public2 
+git commit -m &#34;mv&#34; 
+git push 
+
+echo &#39;public&#39;&gt;&gt;.gitignore 
+mv public2 public 
+git add public2 
+git commit -m &#34;gitignore&#34; 
+git push
+</code></pre></td></tr></table>
+</div>
+</div><p>如果出现<code>Error：Command &quot;hugo&quot; exited with 255</code>的话，需要我们将BUILD COMMAND将hugo改成hugo -D &ndash;gc
+<img src="/img/img3/image10.png" alt="图片">
+进入代码托管的页面，如果左边的小窗口显示正常，就说明发布成功，则点击Visit
+<img src="/img/img3/image11.png" alt="图片">
+如果地址栏显示如这样，就说明发布成功，同样，我们可以看到Vercel给我们自动分配了一个域名。
+<img src="/img/img3/image12.png" alt="图片">
+至此我们就完成将文件托管到Vercel的全部操作。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文参考教程：<a href="https://leftpocket.cn/post/hugo/hugo_creation/">码农在新加坡的个人博客</a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">陈</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-03-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpage/">
+            <span class="next-text nav-default">从零开始搭建个人博客之hugo托管GitHub Page</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2023-03-10 21:40:24 \u002b0800 CST',
+        title: '从零开始搭建个人博客之hugo部署Vercel',
+        clientID: '',
+        clientSecret: '',
+        repo: 'qichenxiaoni.github.io',
+        owner: 'qichenxiaoni',
+        admin: ['qichenxiaoni'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>陈</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
