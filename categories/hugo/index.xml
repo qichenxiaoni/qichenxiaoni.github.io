@@ -6,23 +6,23 @@
     <description>Recent content in hugo on 小陈的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Mar 2023 17:23:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 19:05:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>从零开始搭建个人博客之使用hugo创建个人站点</title>
-      <link>http://localhost:1313/post/two-post/</link>
-      <pubDate>Fri, 10 Mar 2023 17:23:13 +0800</pubDate>
+      <title>从零开始搭建个人博客之hugo托管GitHub Page</title>
+      <link>http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpage/</link>
+      <pubDate>Fri, 10 Mar 2023 19:05:17 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/two-post/</guid>
+      <guid>http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpage/</guid>
       <description>前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug</description>
     </item>
     
     <item>
-      <title>First Post</title>
-      <link>http://localhost:1313/post/first-post/</link>
-      <pubDate>Thu, 09 Mar 2023 23:55:54 +0800</pubDate>
+      <title>从零开始搭建个人博客之使用hugo创建个人站点</title>
+      <link>http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Fri, 10 Mar 2023 17:23:13 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/first-post/</guid>
-      <description>这是我的第一篇博客 这是我的第一篇博客</description>
+      <guid>http://localhost:1313/post/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/</guid>
+      <description>前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug</description>
     </item>
     
   </channel>
