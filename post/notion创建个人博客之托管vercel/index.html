@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Notion创建个人博客之托管Vercel - 小陈的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="陈" /><meta name="description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%89%98%E7%AE%A1vercel/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Notion创建个人博客之托管Vercel" />
+<meta property="og:description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%89%98%E7%AE%A1vercel/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-03-12T22:17:42+08:00" />
+<meta property="article:modified_time" content="2023-03-12T22:17:42+08:00" />
+
+<meta itemprop="name" content="Notion创建个人博客之托管Vercel">
+<meta itemprop="description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可"><meta itemprop="datePublished" content="2023-03-12T22:17:42+08:00" />
+<meta itemprop="dateModified" content="2023-03-12T22:17:42+08:00" />
+<meta itemprop="wordCount" content="1422">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Notion创建个人博客之托管Vercel"/>
+<meta name="twitter:description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">小陈的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">小陈的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Notion创建个人博客之托管Vercel</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-03-12 </span>
+        <div class="post-category">
+            <a href="/categories/hugo/"> hugo </a>
+            </div>
+          <span class="more-meta"> 约 1422 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#开发流程">开发流程</a>
+          <ul>
+            <li><a href="#克隆项目">克隆项目</a></li>
+            <li><a href="#托管vercel平台">托管Vercel平台</a></li>
+            <li><a href="#简易博客配置">简易博客配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#music_player-processenvnext_public_music_player--true--是否使用音乐播放插件">// 樱花飘落特效
+SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
+是否开启音乐插件
+MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<p>当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可以不用敲一行代码就可以制作出一个属于自己的个人博客，只需要有一个Notion账号，Github账号以及Vercel账号就可以实现了。那么废话就不多说了，开始本次的教程吧！</p>
+<h2 id="开发流程">开发流程</h2>
+<h3 id="克隆项目">克隆项目</h3>
+<p>首先我们需要有一个github账号，如果没有也可以先打开<a href="https://www.github.com">github</a>页面再进行注册登录。</p>
+<p>登陆之后，我们在左上角输入NotionNext搜索，也可以点击<a href="https://github.com/tangly1024/NotionNext">此链接</a>直接跳转到NotionNext，然后点击右上角的Fork按钮，在下拉菜单中选择Create Fork，这样就会拷贝一份代码到你的github中。</p>
+<p><img src="/img/img6/image1.png" alt="图片"></p>
+<p><img src="/img/img6/image2.png" alt="图片"></p>
+<p>这份代码就是我们将Notion搭建为个人博客网站的关键，这个<code>NotionNext</code>调用了Notion的API来展示Notion的页面，同时也提供了一些主题和特效来定制化我们自己的个人网站效果。</p>
+<p>对于这份代码仓库，我们基本可以不用做什么改动，只需要对<code>blog.config.js</code>这份文件进行修改，因为这份文件是所有主题特效的详细配置文件。</p>
+<h3 id="托管vercel平台">托管Vercel平台</h3>
+<p>首先我们依旧需要一个Vercel账号，如果没有Vercel的账号，可以直接在浏览器中输入https://vercel.com/，也可以直接点击<a href="https://vercel.com/">Vercel</a>，进行登录，温馨提示：建议使用github账号注册，这样方便我们从github仓库中导入<code>NotionNext</code>。</p>
+<p>登录之后我们需要做的第一件事就是新建项目，点击<code>New Project</code>，</p>
+<p><img src="/img/img6/image3.png" alt="图片"></p>
+<p>导入git仓库，可以全部导入，也可以指定导入的仓库。</p>
+<p><img src="/img/img6/image4.png" alt="图片"></p>
+<p>在仓库列表中选择<code>NotionNext</code>并点击<code>Import</code>。</p>
+<p><img src="/img/img6/image5.png" alt="图片"></p>
+<p>Import之后，我们基本上没有什么需要修改的了，只需要我们在<code>Environment variables</code>中添加一条记录即可。Name：<code>NOTION_PAGE_ID</code> Values：<code>34889e026fc44f7eb074c3847a052020</code>。</p>
+<p><img src="/img/img6/image6.png" alt="图片"></p>
+<p>这里的值是我们从Notion里发布出去的链接中的中间部分，也就是这一部分</p>
+<p><img src="/img/img6/image7.png" alt="图片"></p>
+<p>弄好之后点击Deploy进行部署，等待几分钟，就可以部署成功了</p>
+<p><img src="/img/img6/image8.png" alt="图片"></p>
+<p>然后点击Vist，可能会出现访问不上的问题，但是没关系，我们可以申请域名来绑定个人网站，这样我们就可以访问了。</p>
+<h3 id="简易博客配置">简易博客配置</h3>
+<p>进入github仓库找到我们刚刚克隆下来的<code>NotionNext</code>，进入仓库找到<code>blog.config.js</code>文件进行修改，特别注意的是，我们在GItHub上的修改是不需要到Vercel上再次部署的，Vercel会监听github上的修改，自动自行部署的。</p>
+<p><img src="/img/img6/image9.png" alt="图片"></p>
+<p>点击blog.config.js文件</p>
+<p><img src="/img/img6/image10.png" alt="图片"></p>
+<p>点击右上角的笔的图标，这样就可以进行修改了，主要看个人喜好，以下是我个人配置。</p>
+<hr>
+<p>修改主题
+THEME: process.env.NEXT_PUBLIC_THEME || &lsquo;hexo&rsquo;, // 主题， 支持 [&lsquo;next&rsquo;,&lsquo;hexo&rsquo;,&ldquo;fukasawa',&lsquo;medium&rsquo;,&lsquo;example&rsquo;] @see <a href="https://preview.tangly1024.com">https://preview.tangly1024.com</a>
+修改个人信息
+AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || &lsquo;Chen&rsquo;, // 您的昵称 例如 tangly1024
+BIO: process.env.NEXT_PUBLIC_BIO || &lsquo;一个迷茫的摆烂人&rsquo;, // 作者简介
+LINK: process.env.NEXT_PUBLIC_LINK || &lsquo;<a href="https://tangly1024.com">https://tangly1024.com</a>&rsquo;, // 网站地址
+修改特效是否开启
+// 鼠标点击烟花特效
+FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
+// 烟花色彩，感谢 <a href="https://github.com/Vixcity">https://github.com/Vixcity</a> 提交的色彩
+FIREWORKS_COLOR: [&lsquo;255, 20, 97&rsquo;, &lsquo;24, 255, 146&rsquo;, &lsquo;90, 135, 255&rsquo;, &lsquo;251, 243, 140&rsquo;],</p>
+<h2 id="music_player-processenvnext_public_music_player--true--是否使用音乐播放插件">// 樱花飘落特效
+SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
+是否开启音乐插件
+MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件</h2>
+<p>修改完之后滑到最下端，点击<code>Commit changes</code>，保存修改。</p>
+<p><img src="/img/img6/image11.png" alt="图片"></p>
+<p>等待几分钟，让Vercel自动部署网站，之后我们可以访问网站查看效果。</p>
+<p><img src="/img/img6/image12.png" alt="图片"></p>
+<p>我们可以发现修改已经生效了。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文至此就结束了，如果还有不懂的可以看<a href="https://www.leftpocket.cn/post/notion/vercel/">码农在新加坡</a>的教程。</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">陈</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-03-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Notion创建个人博客之申请域名绑定个人博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
+            <span class="next-text nav-default">Notion创建个人博客之创建个人主页</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2023-03-12 22:17:42 \u002b0800 CST',
+        title: 'Notion创建个人博客之托管Vercel',
+        clientID: '',
+        clientSecret: '',
+        repo: 'qichenxiaoni.github.io',
+        owner: 'qichenxiaoni',
+        admin: ['qichenxiaoni'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>陈</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
