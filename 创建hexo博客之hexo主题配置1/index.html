@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>创建Hexo博客之Hexo主题配置1 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="创建Hexo博客之Hexo主题配置1" />
+<meta property="og:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T21:15:11+08:00" />
+<meta property="article:modified_time" content="2023-04-19T21:15:11+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="创建Hexo博客之Hexo主题配置1"/>
+<meta name="twitter:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" /><link rel="prev" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" /><link rel="next" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "创建Hexo博客之Hexo主题配置1",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1\/"
+        },"genre": "posts","wordcount":  7895 ,
+        "url": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1\/","datePublished": "2023-04-19T21:15:11+08:00","dateModified": "2023-04-19T21:15:11+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">创建Hexo博客之Hexo主题配置1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hexo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hexo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;7895 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;16 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#配置">配置</a>
+      <ul>
+        <li><a href="#语言网站资料">语言、网站资料</a></li>
+        <li><a href="#导航栏设置">导航栏设置</a>
+          <ul>
+            <li><a href="#参数设置">参数设置</a></li>
+            <li><a href="#菜单目录">菜单/目录</a></li>
+          </ul>
+        </li>
+        <li><a href="#代码设置">代码设置</a>
+          <ul>
+            <li><a href="#代码高亮样式">代码高亮样式</a></li>
+            <li><a href="#代码复制">代码复制</a></li>
+            <li><a href="#代码框展开关闭">代码框展开/关闭</a></li>
+            <li><a href="#代码换行">代码换行</a></li>
+            <li><a href="#代码框高度">代码框高度</a></li>
+          </ul>
+        </li>
+        <li><a href="#社交图标">社交图标</a></li>
+        <li><a href="#头像">头像</a></li>
+        <li><a href="#顶部图">顶部图</a></li>
+        <li><a href="#文章封面">文章封面</a></li>
+        <li><a href="#主页文章节选自动节选和文章页description">主页文章节选（自动节选和文章页description）</a></li>
+        <li><a href="#内容复制相关配置">内容复制相关配置</a></li>
+        <li><a href="#文章页面配置">文章页面配置</a>
+          <ul>
+            <li><a href="#文章版权">文章版权</a></li>
+            <li><a href="#toc">TOC</a>
+              <ul>
+                <li><a href="#为特定文章配置">为特定文章配置</a></li>
+              </ul>
+            </li>
+            <li><a href="#相关文章">相关文章</a></li>
+            <li><a href="#文章过期提示">文章过期提示</a></li>
+            <li><a href="#最后">最后</a></li>
+          </ul>
+        </li>
+        <li><a href="#footer设置">Footer设置</a>
+          <ul>
+            <li><a href="#博客年份设置">博客年份设置</a></li>
+            <li><a href="#页脚自定义文本">页脚自定义文本</a></li>
+          </ul>
+        </li>
+        <li><a href="#侧边栏设置">侧边栏设置</a>
+          <ul>
+            <li><a href="#侧边排版">侧边排版</a></li>
+            <li><a href="#访问人数-busuanzi-uv-和-pv">访问人数 busuanzi (UV 和 PV)</a></li>
+            <li><a href="#运行时间">运行时间</a></li>
+            <li><a href="#最后-1">最后</a></li>
+          </ul>
+        </li>
+        <li><a href="#功能按钮">功能按钮</a>
+          <ul>
+            <li><a href="#简繁转换按钮">简繁转换按钮</a></li>
+            <li><a href="#阅读模式">阅读模式</a></li>
+            <li><a href="#夜间模式">夜间模式</a></li>
+            <li><a href="#滚动状态百分比">滚动状态百分比</a></li>
+            <li><a href="#按钮排序">按钮排序</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener noreffer ">Hexo</a>是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。</p>
+<p>Hexo的主要特征包括以下几点：</p>
+<ol>
+<li>快速：Hexo采用了缓存机制和异步渲染技术，生成速度非常快；</li>
+<li>简单易用：Hexo的配置非常简单，它支持大量的<a href="https://hexo.io/themes/" target="_blank" rel="noopener noreffer ">主题</a>和<a href="https://hexo.io/plugins/" target="_blank" rel="noopener noreffer ">插件</a>，使得用户可以快速打造自己的个性化博客；</li>
+<li>Markdown支持： Hexo支持使用Markdown语法来编写文章，并且可以直接在命令行界面预览效果；</li>
+<li>多平台支持：Hexo可以发布到多种平台，例如：Github Pages、HeroKu以及Netlity等等；</li>
+<li>插件丰富：Hexo有大量的插件可以供选择，如SEO优化、社交分享等，可以很大程度上满足用户的各种需求；</li>
+</ol>
+<p>总而言之，Hexo是一款非常优秀的博客生成器，它能够让用户快速地创建自己的博客网站，并提供了十分丰富的主题和插件来满足用户的需求。</p>
+<h2 id="配置">配置</h2>
+<h3 id="语言网站资料">语言、网站资料</h3>
+<p>Hexo博客默认的语言是<code>en</code>，支持三种不同的语言，分别是<code>default(en)</code>、<code>zh-CN(简体)</code>以及<code>zh-TW(繁体)</code>，修改博客语言需要到根目录下的<code>_config.yml</code>文件中找到<code>language:</code>，将值改为<code>zh-CN</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Site</span><span class="w">
+</span><span class="w"></span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">zh-CN</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>修改网站各种资料，例如标题、副标题和邮箱等个人资料，请修改博客根目录的<code>_config.yml</code>文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Site</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;小陈的博客&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;一个想摆烂的代码人&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;欢迎来到摆烂的代码世界&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l">Blog</span><span class="w">
+</span><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">Chen</span><span class="w">
+</span><span class="w"></span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">zh-CN</span><span class="w">
+</span><span class="w"></span><span class="nt">timezone</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># URL</span><span class="w">
+</span><span class="w"></span><span class="c">## Set your site url here. For example, if you use GitHub Page, set url as &#39;https://username.github.io/project&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">http://qichenni.github.io</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="导航栏设置">导航栏设置</h3>
+<p><strong>上面是修改的文件是博客根目录下的<code>_config.yml</code>文件内容，接下来要修改的内容都是在刚刚创建的<code>_config.butterfly.yml</code>文件。</strong></p>
+<h4 id="参数设置">参数设置</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">nav:
+  logo: #image
+  display_title: true
+  fixed: false # fixed navigation bar(固定导航条)
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">logo</td>
+<td style="text-align:center">网站的logo，支持图片，可以直接填入图片的链接</td>
+</tr>
+<tr>
+<td style="text-align:center">display_title</td>
+<td style="text-align:center">是否显示网站标题，true表示显示，false表示关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">fixed</td>
+<td style="text-align:center">是否固定状态栏</td>
+</tr>
+</tbody>
+</table>
+<h4 id="菜单目录">菜单/目录</h4>
+<p>主题中的配置文件中的关于菜单/目录都是被注释着的，当我们需要启用的时候，只需要将前面的‘#’号删除即可。
+原来的菜单/目录的配置如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l">/ || fas fa-home</span><span class="w">
+</span><span class="w"></span><span class="nt">Archives</span><span class="p">:</span><span class="w"> </span><span class="l">/archives/ || fas fa-archive</span><span class="w">
+</span><span class="w"></span><span class="nt">Tags</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/ || fas fa-tags</span><span class="w">
+</span><span class="w"></span><span class="nt">Categories</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/ || fas fa-folder-open</span><span class="w">
+</span><span class="w"></span><span class="nt">List||fas fa-list</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">Music</span><span class="p">:</span><span class="w"> </span><span class="l">/music/ || fas fa-music</span><span class="w">
+</span><span class="w">  </span><span class="nt">Movie</span><span class="p">:</span><span class="w"> </span><span class="l">/movies/ || fas fa-video</span><span class="w">
+</span><span class="w"></span><span class="nt">Link</span><span class="p">:</span><span class="w"> </span><span class="l">/link/ || fas fa-link</span><span class="w">
+</span><span class="w"></span><span class="nt">About</span><span class="p">:</span><span class="w"> </span><span class="l">/about/ || fas fa-heart</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>但由于我们在这里没有movie和music，因此，我们可以将movie和music删除，更替为link和about。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入_config.butterfly.yml</span><span class="w">
+</span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">主页</span><span class="p">:</span><span class="w"> </span><span class="l">/ || fas fa-home</span><span class="w">
+</span><span class="w">  </span><span class="nt">时间轴</span><span class="p">:</span><span class="w"> </span><span class="l">/archives/ || fas fa-archive</span><span class="w">
+</span><span class="w">  </span><span class="nt">标签</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/ || fas fa-tags</span><span class="w">
+</span><span class="w">  </span><span class="nt">分类</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/ || fas fa-folder-open</span><span class="w">
+</span><span class="w">  </span><span class="nt">链接||fas fa-list</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">友情链接</span><span class="p">:</span><span class="w"> </span><span class="l">/link/ || fas fa-link</span><span class="w">
+</span><span class="w">    </span><span class="nt">关于我</span><span class="p">:</span><span class="w"> </span><span class="l">/about/ || fas fa-heart</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>需要注意的是，书写格式必须要必须是<code>/xxx/</code>，后面<code>||</code>分开，然后写图标名，如果你不想它显示图标，也可以不写图标名，子目录默认是展开的，如果想要隐藏展开，只需要在子目录后加上一<code>||hide</code>即可，例如<code>链接||fas fa-list || hide:</code>，最后，导航栏的名字可以自行更改。</p>
+</blockquote>
+<h3 id="代码设置">代码设置</h3>
+<p><strong>注意</strong>：代码块中的所有功能只适用于 Hexo 自带的代码渲染，如果使用第三方的渲染器，不一定会有效。</p>
+<h4 id="代码高亮样式">代码高亮样式</h4>
+<p>butterfly主题支持六种不同的代码高亮样式，分别是：<code>darker</code>、<code>pale night</code>、<code>light</code>、<code>ocean</code>、<code>mac</code>、<code>mac light</code>。</p>
+<p>修改代码高亮样式也很简单，只需要我们进入主题配置文件，将代码高亮主题改成自己喜欢的主题即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入_config.butterfly.yml</span><span class="w">
+</span><span class="w"></span><span class="nt">highlight_theme</span><span class="p">:</span><span class="w"> </span><span class="l">mac</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>darker</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/darker.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/darker.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/darker.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/darker.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/darker.png"
+        title="darker" /></p>
+<blockquote>
+<p>pale night</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/pale%20night.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/pale%20night.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/pale%20night.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/pale%20night.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/pale%20night.png"
+        title="pale night" /></p>
+<blockquote>
+<p>light</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/light.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/light.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/light.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/light.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/light.png"
+        title="light" /></p>
+<blockquote>
+<p>ocean</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/ocean.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/ocean.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/ocean.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/ocean.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/ocean.png"
+        title="ocean" /></p>
+<blockquote>
+<p>mac</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac.png"
+        title="mac" /></p>
+<blockquote>
+<p>mac light</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac%20light.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac%20light.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac%20light.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac%20light.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/mac%20light.png"
+        title="mac light" /></p>
+<p>如果你不喜欢或者不需要代码高亮，你也可以将<code>highlight_theme</code>改为<code>false</code>，这样的效果如下：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/false.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/false.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/false.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/false.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/false.png"
+        title="false" /></p>
+<p>最后，如果以上这几款都不能满足你，你也可以自定义代码高亮，主题作者也给出了自定义代码高亮主题的教程，点击<a href="https://butterfly.js.org/posts/b37b5fe3/" target="_blank" rel="noopener noreffer ">此链接</a>跳转过去吧。</p>
+<h4 id="代码复制">代码复制</h4>
+<p>顾名思义，就是设置代码是否可以被复制的一项功能，这项功能默认是开启的，如果你不希望代码能够被复制，可以在主题配置文件，也就是<code>_config.butterfly.yml</code>中找到<code>highlight_copy: true</code>改为<code>highlight_copy: false</code>即可。</p>
+<h4 id="代码框展开关闭">代码框展开/关闭</h4>
+<p>在默认的情况下，代码框是自动展开的，如果你不希望代码框默认是展开的，可以去主题配置文件，也就是<code>_config.butterfly.yml</code>中找到<code>highlight_shrink:</code>，将其属性从<code>false</code>改成<code>true</code>，当我们将这一属性改为<code>true</code>之后，代码框就会默认不展开，需要我们点击代码框上的‘&gt;’来展开。</p>
+<p>作者也针对这一属性给出了三个属性值，第一个是<code>true</code>，当我们选择这个属性值的时候，全部代码框是不展开的，需要点击<code>&gt;</code>才能展开；第二个是<code>false</code>，当们选择这个属性值的时候，全部代码是展开的，可以点击<code>&gt;</code>来关闭代码框；最后一个就是<code>none</code>，当我们选择这个属性值的时候，是全部展开的，并且没有<code>&gt;</code>按钮来控制开与关。</p>
+<blockquote>
+<p>你也可以在post/page页对应的markdown文件front-matter添加highlight_shrink来独立配置。当主题配置文件中的 highlight_shrink 设为true时，可在front-matter添加highlight_shrink: false来单独配置文章展开代码框。当主题配置文件中的 highlight_shrink 设为false时，可在front-matter添加highlight_shrink: true来单独配置文章收缩代码框。</p>
+</blockquote>
+<h4 id="代码换行">代码换行</h4>
+<p>在默认情况下，Hexo在编译的时候不会实现代码自动换行，如果你不想代码换行的，那么可以考虑修改代码换行的属性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入_config.butterfly.yml</span><span class="w">
+</span><span class="w"></span><span class="nt">code_word_wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>修改完之后，还需要根据你使用的渲染的进一步设置。</p>
+<p>如果你是使用<code>highlight</code>渲染，需要找到你站点的<code>Hexo</code>配置文件<code>_config.yml</code>，将<code>line_number</code>改成<code>false</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">highlight</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">line_number</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># &lt;- 改这里</span><span class="w">
+</span><span class="w">  </span><span class="nt">auto_detect</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">tab_replace</span><span class="p">:</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>如果你是使用<code>prismjs</code>渲染，需要找到你站点的<code>Hexo</code>配置文件<code>_config.yml</code>，将<code>line_number</code>改成<code>false</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">prismjs:
+  enable: false
+  preprocess: true
+  line_number: false # &lt;- 改这里
+  tab_replace: &#39;&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>在这里就没有修改了，因为我觉得还是需要不需要换行的好，有时候复制容易忽略代码换行了的问题，最后导致报错。</p>
+<p>如果你设置了，那么代码框底部就不会有滑动条了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%A3%E7%A0%81%E6%A1%86%E5%BA%95%E9%83%A8%E6%BB%91%E5%8A%A8%E6%9D%A1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%A3%E7%A0%81%E6%A1%86%E5%BA%95%E9%83%A8%E6%BB%91%E5%8A%A8%E6%9D%A1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%A3%E7%A0%81%E6%A1%86%E5%BA%95%E9%83%A8%E6%BB%91%E5%8A%A8%E6%9D%A1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%A3%E7%A0%81%E6%A1%86%E5%BA%95%E9%83%A8%E6%BB%91%E5%8A%A8%E6%9D%A1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%A3%E7%A0%81%E6%A1%86%E5%BA%95%E9%83%A8%E6%BB%91%E5%8A%A8%E6%9D%A1.png"
+        title="代码框底部滑动条" /></p>
+<h4 id="代码框高度">代码框高度</h4>
+<blockquote>
+<p>主题版本3.7.0以上支持</p>
+</blockquote>
+<p>该属性可以设置代码框的高度，如果代码内容只会显示高度之内的，超出的部分会默认隐藏，并且显示展开按钮。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入_config.butterfly.yml</span><span class="w">
+</span><span class="w"></span><span class="nt">highlight_height_limit: false # unit</span><span class="p">:</span><span class="w"> </span><span class="l">px</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：</strong></p>
+<ol>
+<li>单位是<code>px</code>，直接添加数字，如 200，不需要我们手动添加单位了；</li>
+<li>虽然我们设置的是200px，但实际上代码框的限制高度是在我们设置的基础上再加30px，这样做的目的也是为了避免某段代码高度只超出<code>highlight_height_limit</code>设置的高度一点时，出现有展开按钮，但展开之后没内容的现象。</li>
+<li>不适用于隐藏后的代码块（ css 设置 display: none）</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-docs-highlight-heigh-limit.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-docs-highlight-heigh-limit.gif, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-docs-highlight-heigh-limit.gif 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-docs-highlight-heigh-limit.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-docs-highlight-heigh-limit.gif"
+        title="hexo-theme-butterfly-docs-highlight-heigh-limit" /></p>
+<h3 id="社交图标">社交图标</h3>
+<blockquote>
+<p>主题支持<a href="https://fontawesome.com/icons?from=io" target="_blank" rel="noopener noreffer ">font-awesome v6</a>图标。</p>
+</blockquote>
+<p>如何添加社交图标，只需要我们在主题配置文件（_config.butterfly.yml）中使用查找功能找到<code>social</code>，在主题配置文件中默认添加了两个社交图标，一个是github，一个是email，那么如何添加呢，只需要点击上面的链接，跳转到图标库中，找到我们需要的图标。</p>
+<p>例如我想添加一个<code>Blog</code>，只需要搜索Blog，下面就会出现搜索出来的结果</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A21.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A21.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A21.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A21.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A21.png"
+        title="图标搜索1" /></p>
+<p>然后找到你喜欢的图标，点击进去</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A22.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A22.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A22.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A22.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E6%90%9C%E7%B4%A22.png"
+        title="图标搜索2" /></p>
+<p>获得属性之后，回到主题配置文件，找到<code>social</code>，在下面添加图标，其结构为：<code>图标名：url || 描述性文字 || color</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">social</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">fab fa-github</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.com/qichenxiaoni || Github || &#39;#24292e&#39;</span><span class="w">
+</span><span class="w">  </span><span class="nt">fas fa-envelope</span><span class="p">:</span><span class="w"> </span><span class="l">mailto:xxxxxx@gmail.com || Email || &#39;#4a7dbe&#39;</span><span class="w">
+</span><span class="w">  </span><span class="nt">fa-solid fa-blog</span><span class="p">:</span><span class="w"> </span><span class="l">https://qichenxiaoni.work || Blog || &#39;pink&#39;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE%E5%B1%95%E7%A4%BA.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE%E5%B1%95%E7%A4%BA.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE%E5%B1%95%E7%A4%BA.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE%E5%B1%95%E7%A4%BA.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE%E5%B1%95%E7%A4%BA.png"
+        title="图标配置展示" /></p>
+<blockquote>
+<p>后续会出如何更换图标库</p>
+</blockquote>
+<h3 id="头像">头像</h3>
+<p>主题默认的头像是一个H，那怎么去修改呢，很简单，只需要到主题配置文件中找到<code>avatar</code>属性即可更换头像。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">avatar</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">img</span><span class="p">:</span><span class="w"> </span><span class="l">/img/avatar.png </span><span class="w"> </span><span class="c"># 支持本地图像，也支持网络链接</span><span class="w">
+</span><span class="w">  </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># 头像会一直转圈，默认是false</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="顶部图">顶部图</h3>
+<p>**注意：**由于这一部分有一些设置，我没有进行设置，并且该部分的一些设置会影响到后面的一些美化设置，因此，我在此部分简短地介绍我做的更改。</p>
+<p>首先我在顶部图这一部分只做了两处修改，第一处是修改了主页的横幅，也就是一进博客的第一部分，第二部分就是页面顶部图片。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 主页横幅</span><span class="w">
+</span><span class="w"></span><span class="nt">index_img</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;./img/image1.png&#34;</span><span class="w">
+</span><span class="w"></span><span class="c"># 如果页面没有设置图片，则显示这个</span><span class="w">
+</span><span class="w"></span><span class="nt">default_top_img</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;./img/image1.png&#34;</span><span class="w"> </span><span class="c">#(这个不知道为什么好像没生效)</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>需要注意的是：</p>
+<ol>
+<li>如果不要显示顶部图，可直接配置 <code>disable_top_img: true</code>;</li>
+<li>顶部图的获取顺序，如果都没有配置，则不显示顶部图;</li>
+<li>页面顶部图的获取顺序：各自配置的 top_img &gt; 配置文件的 default_top_img;</li>
+<li>文章页顶部图的获取顺序：各自配置的 top_img &gt; cover &gt; 配置文件的 default_top_img</li>
+</ol>
+</blockquote>
+<p>具体的配置还请前往博客教程文档查看。点击<a href="https://butterfly.js.org/posts/4aa8abbe/#%E9%A0%82%E9%83%A8%E5%9C%96" target="_blank" rel="noopener noreffer ">此链接</a>跳转。</p>
+<h3 id="文章封面">文章封面</h3>
+<p>文章的 markdown 文档上,在<code> Front-matter</code>添加<code> cover</code> ,并填上要显示的图片地址，如果不配置<code> cover</code>,可以设置显示默认的 <code>cover</code>，如果不想在首页显示 <code>cover</code>, 可以设置为 <code>false</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入主题配置文件</span><span class="w">
+</span><span class="w"></span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="c"># display the cover or not (是否顯示文章封面)</span><span class="w">
+</span><span class="w">  </span><span class="nt">index_enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">   </span><span class="c">#主页是否显示文章封面图</span><span class="w">
+</span><span class="w">  </span><span class="nt">aside_enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">   </span><span class="c">#侧栏是否显示文章封面图</span><span class="w">
+</span><span class="w">  </span><span class="nt">archives_enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">   </span><span class="c">#归档页面是否显示文章封面图</span><span class="w">
+</span><span class="w">  </span><span class="c"># the position of cover in home page (封面顯示的位置)</span><span class="w">
+</span><span class="w">  </span><span class="c"># left/right/both 全左/全右/左右轮换</span><span class="w">
+</span><span class="w">  </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l">both</span><span class="w">
+</span><span class="w">  </span><span class="c"># When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)</span><span class="w">
+</span><span class="w">  </span><span class="nt">default_cover</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png</span><span class="w">
+</span><span class="w">    </span>- <span class="l">https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg2.png</span><span class="w">
+</span><span class="w">    </span>- <span class="l">https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg3.png</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="主页文章节选自动节选和文章页description">主页文章节选（自动节选和文章页description）</h3>
+<p>因为主题UI的关系，主页文章节选仅仅支持自动节选以及文章页description，自动节选就是默认从你的文章中摘选你设置<code>length</code>个字展示出来，文章页<code>description</code>就是你自己在<code>froot-matter</code>中添加一个<code>desciption</code>，你自己填入值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 修改配置文件</span><span class="w">
+</span><span class="w"></span><span class="c"># Display the article introduction on homepage</span><span class="w">
+</span><span class="w"></span><span class="c"># 1: description  # 只显示description；</span><span class="w">
+</span><span class="w"></span><span class="c"># 2: both (if the description exists, it will show description, or show the auto_excerpt)  #  优先选择description，如果没有配置description，则显示自动节选的内容</span><span class="w">
+</span><span class="w"></span><span class="c"># 3: auto_excerpt (default)   # 只显示自动节选</span><span class="w">
+</span><span class="w"></span><span class="c"># false: do not show the article introduction  # 不显示文章内容</span><span class="w">
+</span><span class="w"></span><span class="nt">index_post_content</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">  </span><span class="nt">length</span><span class="p">:</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="c"># if you set method to 2 or 3, the length need to config （如果你选择了2/3，那么长度`length`就需要配置）</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>description</code>在<code>front-matter</code>里添加。</p>
+</blockquote>
+<h3 id="内容复制相关配置">内容复制相关配置</h3>
+<p>该选项可以配置网站文章是否允许被复制，复制时带不带版权信息已经复制多少就在复制内容之后添加版权信息。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 进入主题配置文件</span><span class="w">
+</span><span class="w"></span><span class="c"># copy settings</span><span class="w">
+</span><span class="w"></span><span class="c"># copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)</span><span class="w">
+</span><span class="w"></span><span class="nt">copy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">copyright</span><span class="p">:</span><span class="w"> 
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">limit_count</span><span class="p">:</span><span class="w"> </span><span class="m">50</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th>配置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable</td>
+<td>是否开启网站复制权限</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>复制内容后面加上版权信息</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>是否开启复制版权信息添加</td>
+</tr>
+<tr>
+<td>limit_count</td>
+<td>字数限制，当复制字数超过此限制时，将在复制内容后面加上版权信息</td>
+</tr>
+</tbody>
+</table>
+<p>eg：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%96%87%E7%AB%A0%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%96%87%E7%AB%A0%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%96%87%E7%AB%A0%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%96%87%E7%AB%A0%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%96%87%E7%AB%A0%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.png"
+        title="文章复制权限" /></p>
+<h3 id="文章页面配置">文章页面配置</h3>
+<h4 id="文章版权">文章版权</h4>
+<p>顾名思义，为你的博客文章展示文章的版权以及许可协议，具体操作进去主题配置文件，找到<code>post_copyright</code>，修改相关配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">post_copyright</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">decode</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">author_href</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l">CC BY-NC-SA 4.0</span><span class="w">
+</span><span class="w">  </span><span class="nt">license_url</span><span class="p">:</span><span class="w"> </span><span class="l">https://creativecommons.org/licenses/by-nc-sa/4.0/</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>**注意：**由于Hexo 4.1开始，默认对网址进行解码，以至于如果是中文网址，会被解码，可设置<code>decode: true</code>来显示中文网址。</p>
+<blockquote>
+<p>true</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%BC%80%E5%90%AF%E8%A7%A3%E7%A0%81.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%BC%80%E5%90%AF%E8%A7%A3%E7%A0%81.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%BC%80%E5%90%AF%E8%A7%A3%E7%A0%81.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%BC%80%E5%90%AF%E8%A7%A3%E7%A0%81.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%BC%80%E5%90%AF%E8%A7%A3%E7%A0%81.png"
+        title="开启解码" /></p>
+<blockquote>
+<p>false</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%85%B3%E9%97%AD%E8%A7%A3%E7%A0%81.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%85%B3%E9%97%AD%E8%A7%A3%E7%A0%81.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%85%B3%E9%97%AD%E8%A7%A3%E7%A0%81.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%85%B3%E9%97%AD%E8%A7%A3%E7%A0%81.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%85%B3%E9%97%AD%E8%A7%A3%E7%A0%81.png"
+        title="关闭解码" /></p>
+<p>当然了，如果文章是转载的，并非原创，不需要显示版权的，可以在文章<code>Front-matter</code>单独设置，也支持对文章单独设置版权信息，也是在文章的<code>Front-matter</code>单独设置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># 转载
+</span><span class="gh"></span>copyright: false
+<span class="gh"># 单独设置版权
+</span><span class="gh"></span>copyright_author: xxxx
+copyright_author_href: https://xxxxxx.com
+copyright_url: https://xxxxxx.com
+copyright_info: 此文章版权归xxxxx所有，如有转载，请注明来自原作者
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="toc">TOC</h4>
+<p>在文章页面，会有目录，用来显示TOC，那么如何设置呢？只需要我们进入主题配置文件，找到<code>toc</code>，然后修改下面的配置即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># toc (目錄)</span><span class="w">
+</span><span class="w"></span><span class="nt">toc</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="c"># 文章页是否显示TOC</span><span class="w">
+</span><span class="w">  </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># 普通页面是否显示toc</span><span class="w">
+</span><span class="w">  </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="c"># 是否显示章节数</span><span class="w">
+</span><span class="w">  </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># 是否展开toc</span><span class="w">
+</span><span class="w">  </span><span class="nt">expand</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># 简介模式 （侧边栏只显示TOC，只对文章页有效）</span><span class="w">
+</span><span class="w">  </span><span class="nt">style_simple</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># for post</span><span class="w">
+</span><span class="w">  </span><span class="c"># 实现显示滚动进度百分比</span><span class="w">
+</span><span class="w">  </span><span class="nt">scroll_percent</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h5 id="为特定文章配置">为特定文章配置</h5>
+<p>如果你的某些文章他不需要toc，或者需要toc其他的设置的时候，只需要在你文章的头部，也就是<code>Front-matter</code>里面添加<code>toc_number</code>和<code>toc</code>，并配置<code>true</code>或者<code>false</code>即可，也不用担心在文章中设置是否能生效，因为文章中的<code>Front-matter</code>的优先级是要高于主题配置文件的。</p>
+<h4 id="相关文章">相关文章</h4>
+<p>相关文章就是在你的文章尾部根据文章的<code>tag</code>的比重来推荐的，那么怎么设置显示推荐文章的数量呢，需要我们进入主题配置文件中，找到<code>related_post</code>，修改其配置即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Related Articles</span><span class="w">
+</span><span class="w"></span><span class="nt">related_post</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="c"># 显示推荐文章数目</span><span class="w">
+</span><span class="w">  </span><span class="nt">date_type</span><span class="p">:</span><span class="w"> </span><span class="l">created</span><span class="w"> </span><span class="c"># or created or updated 文章日期顯示創建日或者更新日</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%9B%B8%E5%85%B3%E6%8E%A8%E8%8D%90.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%9B%B8%E5%85%B3%E6%8E%A8%E8%8D%90.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%9B%B8%E5%85%B3%E6%8E%A8%E8%8D%90.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%9B%B8%E5%85%B3%E6%8E%A8%E8%8D%90.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%9B%B8%E5%85%B3%E6%8E%A8%E8%8D%90.png"
+        title="相关推荐" /></p>
+<blockquote>
+<p>当文章封面设置为 false 时，或者没有获取到封面配置，相关文章背景将会显示主题色。</p>
+</blockquote>
+<h4 id="文章过期提示">文章过期提示</h4>
+<p>因为有一部分的博客内容会随着时间的变化而产生改变，也就是说或许在之前是可以使用的，但是可能随着时间变化，某些东西消失了，或者是更新了，原本的内容就不再适用了，因此可以设置一个这个过期提示告诉他人，这个内容是多久多久前写的，可能已经失效了或是不适用了。</p>
+<p>那么怎么来设置呢，只需要进入主题配置文件中，找到<code>noticeOutdate</code>，修改其下面的配置即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Displays outdated notice for a post (文章過期提醒)</span><span class="w">
+</span><span class="w"></span><span class="nt">noticeOutdate</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">style: flat # style</span><span class="p">:</span><span class="w"> </span><span class="l">simple/flat</span><span class="w">
+</span><span class="w">  </span><span class="nt">limit_day</span><span class="p">:</span><span class="w"> </span><span class="m">183</span><span class="w"> </span><span class="c"># When will it be shown</span><span class="w">
+</span><span class="w">  </span><span class="nt">position: top # position</span><span class="p">:</span><span class="w"> </span><span class="l">top/bottom</span><span class="w">
+</span><span class="w">  </span><span class="nt">message_prev</span><span class="p">:</span><span class="w"> </span><span class="l">It has been</span><span class="w">
+</span><span class="w">  </span><span class="nt">message_next</span><span class="p">:</span><span class="w"> </span><span class="l">days since the last update, the content of the article may be outdated.</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="最后">最后</h4>
+<p>原本还有一些文章页面配置的，但是由于我没使用那些，因此没有进行说明，例如文章编辑按钮、文章分页按钮以及文章打赏，如果有需求的，可以点击<a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%96%87%E7%AB%A0%E7%89%88%E6%AC%8A" target="_blank" rel="noopener noreffer ">此链接</a>跳转过去设置。</p>
+<h3 id="footer设置">Footer设置</h3>
+<h4 id="博客年份设置">博客年份设置</h4>
+<p><code>since</code>是一个来展示你站点起始时间的选项。它位于页面的最底部，如果需要设置，那么进入主题配置文件，找到<code>footer</code>，进行修改。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">footer</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">owner</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">since</span><span class="p">:</span><span class="w"> </span><span class="m">2023</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="页脚自定义文本">页脚自定义文本</h4>
+<p><code>custom_text</code>是一个给你用来在页脚自定义文本的选项。通常你可以在这里写声明文本等。支持 HTML，如果需要设置，那么进入主题配置文件，找到<code>footer</code>，进行修改。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Footer Settings</span><span class="w">
+</span><span class="w"></span><span class="c"># --------------------------------------</span><span class="w">
+</span><span class="w"></span><span class="nt">footer</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">owner</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">since</span><span class="p">:</span><span class="w"> </span><span class="m">2023</span><span class="w">
+</span><span class="w">  </span><span class="nt">custom_text</span><span class="p">:</span><span class="w"> </span><span class="l">欢迎来到小陈的博客空间</span><span class="w">
+</span><span class="w">  </span><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># Copyright of theme and framework</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer.png"
+        title="footer" /></p>
+<h3 id="侧边栏设置">侧边栏设置</h3>
+<h4 id="侧边排版">侧边排版</h4>
+<p>侧边排版的设置很多，也很详细，他可以让我们自行决定哪个项目需要显示，怎么显示，位置在哪里，也可以设置整个侧边栏不显示。</p>
+<p>进入主题配置文件，找到<code>aside</code>，修改下面的配置即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">aside</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="c"># 是否开启侧边栏</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="c"># 是否显示按钮</span><span class="w">
+</span><span class="w">  </span><span class="nt">button</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">mobile</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># display on mobile</span><span class="w">
+</span><span class="w">  </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l">right</span><span class="w"> </span><span class="c"># left or right</span><span class="w">
+</span><span class="w">  </span><span class="nt">display</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">archive</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_author</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> 
+</span><span class="w">    </span><span class="nt">button</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">fab fa-github</span><span class="w">
+</span><span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l">Follow Me</span><span class="w">
+</span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.com/xxxxxx</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_announcement</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="l">This is my Blog</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_recent_post</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="c"># if set 0 will show all</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l">date</span><span class="w"> </span><span class="c"># date or updated</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="c"># Don&#39;t modify the setting unless you know how it works</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_categories</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="c"># if set 0 will show all</span><span class="w">
+</span><span class="w">    </span><span class="nt">expand</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w"> </span><span class="c"># none/true/false</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="c"># Don&#39;t modify the setting unless you know how it works</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_tags</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="c"># if set 0 will show all</span><span class="w">
+</span><span class="w">    </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># 是否标签有颜色</span><span class="w">
+</span><span class="w">    </span><span class="nt">orderby</span><span class="p">:</span><span class="w"> </span><span class="l">random</span><span class="w"> </span><span class="c"># Order of tags, random/name/length</span><span class="w">
+</span><span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c"># Sort of order. 1, asc for ascending; -1, desc for descending</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="c"># Don&#39;t modify the setting unless you know how it works</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_archives</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">monthly</span><span class="w"> </span><span class="c"># yearly or monthly</span><span class="w">
+</span><span class="w">    </span><span class="nt">format: MMMM YYYY # eg</span><span class="p">:</span><span class="w"> </span><span class="l">YYYY年MM月</span><span class="w">
+</span><span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w"> </span><span class="c"># Sort of order. 1, asc for ascending; -1, desc for descending</span><span class="w">
+</span><span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="c"># if set 0 will show all</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="c"># Don&#39;t modify the setting unless you know how it works</span><span class="w">
+</span><span class="w">  </span><span class="nt">card_webinfo</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">post_count</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">last_push_date</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="c"># Don&#39;t modify the setting unless you know how it works</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>由于侧边栏排版的设置多样性强，我也没有完全试完，如果有兴趣的可以自行摸索一下，这里就不多做介绍了。</p>
+<h4 id="访问人数-busuanzi-uv-和-pv">访问人数 busuanzi (UV 和 PV)</h4>
+<p>这个我自认为没有多大的用处，首先个人博客大概率是不会有很多人看的，并且busuanzi开启之后，数据是不对的，必须要格式化清空一遍，但是没找到格式化清空的有效方法，因此没设置，但如果有需求的朋友或者是知道怎么格式化清空的朋友也可以试试。</p>
+<p>进入主题配置文件，找到<code>busuanzi</code>，修改下面的配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">busuanzi</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">site_uv</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">site_pv</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">page_pv</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>同时如果你需要修改busuanzi的CDN链接，可以到主题配置文件中搜索CDN，进行修改。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">CDN</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">option</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">busuanzi</span><span class="p">:</span><span class="w"> </span><span class="l">xxxxxxxxx</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="运行时间">运行时间</h4>
+<p>这个设置就是显示该个人博客运行了多久了，可设置也可不设置，全凭个人意愿，如果需要设置，进入主题配置文件，搜索<code>runtimeshow</code>，将<code>enable</code>设置为<code>true</code>和<code> publish_date:</code>设置为具体的时间（可以是月/日/年 时间，也可以是年/月/日 时间）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">runtimeshow:
+  enable: true
+  publish_date: 2023/4/15 00:00:00
+  ##网页开通时间
+  #格式: 月/日/年 时间
+  #也可以写成 年/月/日 时间
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png"
+        title="网站运行时间" /></p>
+<h4 id="最后-1">最后</h4>
+<p>侧边栏设置还有最新评论以及自定义侧边栏，由于我没有设置了，因此有需要的朋友可以自行前往主题官方文档进行查看修改，点击<a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%9C%80%E6%96%B0%E8%A9%95%E8%AB%96" target="_blank" rel="noopener noreffer ">此链接</a>进行跳转。</p>
+<h3 id="功能按钮">功能按钮</h3>
+<h4 id="简繁转换按钮">简繁转换按钮</h4>
+<p>简体繁体互换，右下角会有简繁转换按钮，修改主题配置文件，找到<code>translate</code>进行修改。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Conversion between Traditional and Simplified Chinese (簡繁轉換)</span><span class="w">
+</span><span class="w"></span><span class="nt">translate</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># The text of a button</span><span class="w">
+</span><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l">繁</span><span class="w">
+</span><span class="w">  </span><span class="c"># the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）</span><span class="w">
+</span><span class="w">  </span><span class="nt">defaultEncoding</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">  </span><span class="c"># Time delay</span><span class="w">
+</span><span class="w">  </span><span class="nt">translateDelay</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span><span class="w">  </span><span class="c"># The text of the button when the language is Simplified Chinese</span><span class="w">
+</span><span class="w">  </span><span class="nt">msgToTraditionalChinese</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;繁&#39;</span><span class="w">
+</span><span class="w">  </span><span class="c"># The text of the button when the language is Traditional Chinese</span><span class="w">
+</span><span class="w">  </span><span class="nt">msgToSimplifiedChinese</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;簡&#39;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>这个简繁转换还是有时候会存在部分字体转换不完全的现象</p>
+</blockquote>
+<h4 id="阅读模式">阅读模式</h4>
+<p>阅读模式下会去掉除文章外的内容，避免干扰阅读，只会出现在文章页面，右下角会有阅读模式按钮，修改主题配置文件，找到<code>readmode</code>改成true即可。</p>
+<h4 id="夜间模式">夜间模式</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># dark mode</span><span class="w">
+</span><span class="w"></span><span class="nt">darkmode</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># Toggle Button to switch dark/light mode</span><span class="w">
+</span><span class="w">  </span><span class="nt">button</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># Switch dark/light mode automatically (自動切換 dark mode和 light mode)</span><span class="w">
+</span><span class="w">  </span><span class="c"># autoChangeMode: 1  Following System Settings, if the system doesn&#39;t support dark mode, it will switch dark mode between 6 pm to 6 am</span><span class="w">
+</span><span class="w">  </span><span class="c"># autoChangeMode: 2  Switch dark mode between 6 pm to 6 am</span><span class="w">
+</span><span class="w">  </span><span class="c"># autoChangeMode: false</span><span class="w">
+</span><span class="w">  </span><span class="nt">autoChangeMode</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="c"># Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18</span><span class="w">
+</span><span class="w">  </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="c"># 8</span><span class="w">
+</span><span class="w">  </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="c"># 22</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button</td>
+<td>是否在右下角显示日夜模式切换按钮</td>
+</tr>
+<tr>
+<td>autoChangeMode</td>
+<td>自动切换的模式<br />autoChangeMode: 1 跟随系统而变化，不支持的浏览器/系统将按照时间 start 到 end 之间切换为 light mode<br/>autoChangeMode: 2 只按照时间 start 到 end 之间切换为 light mode ,其余时间为 dark mode<br/>autoChangeMode: false 取消自动切换<br/></td>
+</tr>
+<tr>
+<td>start</td>
+<td>light mode 的开始时间</td>
+</tr>
+<tr>
+<td>end</td>
+<td>light mode 的结束时间</td>
+</tr>
+</tbody>
+</table>
+<h4 id="滚动状态百分比">滚动状态百分比</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># show scroll percent in scroll-to-top button</span><span class="w">
+</span><span class="w"></span><span class="nt">rightside_scroll_percent</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%BB%9A%E5%8A%A8%E7%8A%B6%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%BB%9A%E5%8A%A8%E7%8A%B6%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94.gif, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%BB%9A%E5%8A%A8%E7%8A%B6%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94.gif 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%BB%9A%E5%8A%A8%E7%8A%B6%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%BB%9A%E5%8A%A8%E7%8A%B6%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94.gif"
+        title="滚动状态百分比" /></p>
+<h4 id="按钮排序">按钮排序</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Don&#39;t modify the following settings unless you know how they work (非必要请不要修改 )</span><span class="w">
+</span><span class="w"></span><span class="c"># Choose: readmode,translate,darkmode,hideAside,toc,chat,comment</span><span class="w">
+</span><span class="w"></span><span class="c"># Don&#39;t repeat 不要重复</span><span class="w">
+</span><span class="w"></span><span class="nt">rightside_item_order</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="c"># readmode,translate,darkmode,hideAside</span><span class="w">
+</span><span class="w">  </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="c"># toc,chat,comment</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结语">结语</h2>
+<p>至此，我们就完成了主题的深入配置一，当然了，主题官方文档还准备了一些标签插件，但是我由于没有使用，因此有需要的朋友点击<a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89" target="_blank" rel="noopener noreffer ">链接</a>自行跳转观看。接下来进入深入配置二。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本篇文章参考<a href="https://butterfly.js.org/posts/4aa8abbe/" target="_blank" rel="noopener noreffer ">官方文档</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" data-title="创建Hexo博客之Hexo主题配置1"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" data-title="创建Hexo博客之Hexo主题配置1"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" data-title="创建Hexo博客之Hexo主题配置1"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" data-title="创建Hexo博客之Hexo主题配置1"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" class="prev" rel="prev" title="创建Hexo博客之Hexo安装"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>创建Hexo博客之Hexo安装</a>
+            <a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" class="next" rel="next" title="创建Hexo博客之Hexo主题配置2">创建Hexo博客之Hexo主题配置2<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

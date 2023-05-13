@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>创建Hexo博客之Hexo主题配置2 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="创建Hexo博客之Hexo主题配置2" />
+<meta property="og:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T21:16:42+08:00" />
+<meta property="article:modified_time" content="2023-04-19T21:16:42+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="创建Hexo博客之Hexo主题配置2"/>
+<meta name="twitter:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" /><link rel="prev" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" /><link rel="next" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "创建Hexo博客之Hexo主题配置2",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2\/"
+        },"genre": "posts","wordcount":  2762 ,
+        "url": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2\/","datePublished": "2023-04-19T21:16:42+08:00","dateModified": "2023-04-19T21:16:42+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">创建Hexo博客之Hexo主题配置2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hexo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hexo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2762 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#配置">配置</a>
+      <ul>
+        <li><a href="#搜索">搜索</a></li>
+        <li><a href="#评论">评论</a></li>
+        <li><a href="#美化与特效">美化与特效</a>
+          <ul>
+            <li><a href="#网站背景">网站背景</a></li>
+            <li><a href="#footer背景">footer背景</a></li>
+          </ul>
+        </li>
+        <li><a href="#页面美化">页面美化</a></li>
+        <li><a href="#网站副标题">网站副标题</a></li>
+        <li><a href="#字数统计">字数统计</a></li>
+        <li><a href="#图片大图展示">图片大图展示</a></li>
+        <li><a href="#pjax">Pjax</a></li>
+        <li><a href="#pangu">Pangu</a></li>
+        <li><a href="#添加全局吸底aplayer教程">添加全局吸底Aplayer教程</a>
+          <ul>
+            <li><a href="#开启主题的aplayerinject">开启主题的aplayerInject</a></li>
+            <li><a href="#插入aplayer-html">插入Aplayer html</a></li>
+          </ul>
+        </li>
+        <li><a href="#css样式">CSS样式</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener noreffer ">Hexo</a>是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。</p>
+<p>Hexo的主要特征包括以下几点：</p>
+<ol>
+<li>快速：Hexo采用了缓存机制和异步渲染技术，生成速度非常快；</li>
+<li>简单易用：Hexo的配置非常简单，它支持大量的<a href="https://hexo.io/themes/" target="_blank" rel="noopener noreffer ">主题</a>和<a href="https://hexo.io/plugins/" target="_blank" rel="noopener noreffer ">插件</a>，使得用户可以快速打造自己的个性化博客；</li>
+<li>Markdown支持： Hexo支持使用Markdown语法来编写文章，并且可以直接在命令行界面预览效果；</li>
+<li>多平台支持：Hexo可以发布到多种平台，例如：Github Pages、HeroKu以及Netlity等等；</li>
+<li>插件丰富：Hexo有大量的插件可以供选择，如SEO优化、社交分享等，可以很大程度上满足用户的各种需求；</li>
+</ol>
+<p>总而言之，Hexo是一款非常优秀的博客生成器，它能够让用户快速地创建自己的博客网站，并提供了十分丰富的主题和插件来满足用户的需求。</p>
+<h2 id="配置">配置</h2>
+<h3 id="搜索">搜索</h3>
+<p>顾名思义就是在个人博客中添加一个搜索功能，作者给出了三种搜索方式，第一种是<code>Algolia</code>，第二种是本地搜索，第三种是<code>DocSearch</code>，在这里我们使用第二种方法，也就是本地搜索。</p>
+<p>如果使用本地搜索的方法，首先第一需要安装<a href="https://github.com/next-theme/hexo-generator-searchdb" target="_blank" rel="noopener noreffer ">hexo-generator-searchdb</a>或者<a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="noopener noreffer ">hexo-generator-search</a>这两个中的其中一个，点击链接，根据文档来进行相关的配置。（本人使用的是第二个链接）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="c1"># 安装依赖</span>
+npm install hexo-generator-search --save
+</code></pre></td></tr></table>
+</div>
+</div><p>安装好依赖之后，回到主题配置文件，使用查找功能找到<code>local_search</code>，修改相关配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Local search</span><span class="w">
+</span><span class="w"></span><span class="nt">local_search</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># Preload the search data when the page loads.</span><span class="w">
+</span><span class="w">  </span><span class="nt">preload</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="c"># Show top n results per article, show all results by setting to -1</span><span class="w">
+</span><span class="w">  </span><span class="nt">top_n_per_article</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">  </span><span class="c"># Unescape html strings to the readable one.</span><span class="w">
+</span><span class="w">  </span><span class="nt">unescape</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">CDN</span><span class="p">:</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable</td>
+<td>是否开启本地搜索</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>预加载，开启后，进入网页后会自动加载搜索文件。关闭时，只有点击搜索按钮后，才会加载搜索文件</td>
+</tr>
+<tr>
+<td>top_n_per_article</td>
+<td>匹配的文章结果，默认显示最开始的1段结果</td>
+</tr>
+<tr>
+<td>unescape</td>
+<td>将html字符串解码为可读字符串</td>
+</tr>
+<tr>
+<td>CDN</td>
+<td>搜索文件的 CDN 地址（默认使用的本地链接）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>记得运行 hexo clean</p>
+</blockquote>
+<h3 id="评论">评论</h3>
+<p>关于评论设置，作者也给出了多种方法，在这里我选择的是<code>livere</code>，也就是来必力。</p>
+<ol>
+<li>首先注册一个<a href="https://livere.com/" target="_blank" rel="noopener noreffer ">来必力</a>账号，如果没有的话；</li>
+<li>登录来必力之后，进入管理页面，可以修改一下设置里面的&rsquo;网站的URL'，将其设置为自己的域名；</li>
+<li>来到代码管理页面，复制里面的<code>data_uid</code>，记住这一个<code>UID</code>在后面很重要的；</li>
+<li>复制好uid之后回到主题配置文件里面，找到<code>livere</code>，将复制好的uid复制进去即可。</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9D%A5%E5%BF%85%E5%8A%9BUID.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9D%A5%E5%BF%85%E5%8A%9BUID.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9D%A5%E5%BF%85%E5%8A%9BUID.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9D%A5%E5%BF%85%E5%8A%9BUID.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9D%A5%E5%BF%85%E5%8A%9BUID.png"
+        title="来必力UID" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E8%AF%84%E8%AE%BA%E8%AE%BE%E7%BD%AE.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E8%AF%84%E8%AE%BA%E8%AE%BE%E7%BD%AE.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E8%AF%84%E8%AE%BA%E8%AE%BE%E7%BD%AE.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E8%AF%84%E8%AE%BA%E8%AE%BE%E7%BD%AE.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E8%AF%84%E8%AE%BA%E8%AE%BE%E7%BD%AE.png"
+        title="评论设置" /></p>
+<p>到此，评论系统也就配置完成了。</p>
+<h3 id="美化与特效">美化与特效</h3>
+<h4 id="网站背景">网站背景</h4>
+<p>网站的默认背景显示为白色，可以为其设置为图片或其他的颜色。</p>
+<p>进入主题配置文件，找到<code>backgorund</code>，修改配置即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Website Background (設置網站背景)</span><span class="w">
+</span><span class="w"></span><span class="c"># can set it to color or image (可設置圖片 或者 顔色)</span><span class="w">
+</span><span class="w"></span><span class="c"># The formal of image: url(http://xxxxxx.com/xxx.jpg)</span><span class="w">
+</span><span class="w"></span><span class="nt">background</span><span class="p">:</span><span class="w"> </span><span class="l">url(/img/image1.png)</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>留意: 如果你的网站根目录不是'/',使用本地图片时，需加上你的根目录。
+例如：网站是 <a href="https://yoursite.com/blog" target="_blank" rel="noopener noreffer ">https://yoursite.com/blog</a>,引用一张img/xx.png图片，则设置background为 `url(/blog/img/xx.png)</p>
+</blockquote>
+<h4 id="footer背景">footer背景</h4>
+<p>这个设置如果你需要在后期使用css样式来修改的话，这里千万不要设置为<code>true</code>，因为如果你css里面设置它为透明色，他不会生效的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># footer是否显示图片背景(与top_img一致)</span><span class="w">
+</span><span class="w"></span><span class="nt">footer_bg</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer%E8%AE%BE%E7%BD%AE.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer%E8%AE%BE%E7%BD%AE.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer%E8%AE%BE%E7%BD%AE.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer%E8%AE%BE%E7%BD%AE.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/footer%E8%AE%BE%E7%BD%AE.png"
+        title="footer设置" /></p>
+<h3 id="页面美化">页面美化</h3>
+<p>会改变ol、ul、h1-h5的样式，field配置生效的区域：post 只在文章页生效、site 在全站生效
+进入主题配置文件，修改相关配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># 美化页面显示</span><span class="w">
+</span><span class="w"></span><span class="nt">beautify</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">field</span><span class="p">:</span><span class="w"> </span><span class="l">site</span><span class="w"> </span><span class="c"># site/post</span><span class="w">
+</span><span class="w">  </span><span class="nt">title-prefix-icon</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;\f0c1&#39;</span><span class="w">
+</span><span class="w">  </span><span class="nt">title-prefix-icon-color</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;#F47466&#34;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>需要注意的是，<code>title-prefix-icon</code>的值是图标的<code>Unicode</code>。</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%9B%BE%E6%A0%87.png"
+        title="图标" /></p>
+<h3 id="网站副标题">网站副标题</h3>
+<p>可设置主页中显示的网站副标题或者喜欢的座右铭。</p>
+<p>修改主题配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># the subtitle on homepage (主頁subtitle)</span><span class="w">
+</span><span class="w"></span><span class="nt">subtitle</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># Typewriter Effect (打字效果)</span><span class="w">
+</span><span class="w">  </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="c"># Customize typed.js (配置typed.js)</span><span class="w">
+</span><span class="w">  </span><span class="c"># https://github.com/mattboldt/typed.js/#customization</span><span class="w">
+</span><span class="w">  </span><span class="nt">typed_option</span><span class="p">:</span><span class="w"> 
+</span><span class="w">  </span><span class="c"># source 調用第三方服務</span><span class="w">
+</span><span class="w">  </span><span class="c"># source: false 關閉調用</span><span class="w">
+</span><span class="w">  </span><span class="c"># source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/</span><span class="w">
+</span><span class="w">  </span><span class="c"># source: 2  調用一句網（簡體） https://yijuzhan.com/</span><span class="w">
+</span><span class="w">  </span><span class="c"># source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/</span><span class="w">
+</span><span class="w">  </span><span class="c"># subtitle 會先顯示 source , 再顯示 sub 的內容</span><span class="w">
+</span><span class="w">  </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">  </span><span class="c"># 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字</span><span class="w">
+</span><span class="w">  </span><span class="nt">sub</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">今日事&amp;#44;今日毕</span><span class="w">
+</span><span class="w">    </span>- <span class="l">Never put off till tomorrow what you can do today</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-doc-index-subtitle.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-doc-index-subtitle.gif, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-doc-index-subtitle.gif 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-doc-index-subtitle.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo-theme-butterfly-doc-index-subtitle.gif"
+        title="hexo-theme-butterfly-doc-index-subtitle" /></p>
+<h3 id="字数统计">字数统计</h3>
+<p>要为Butterfly配上字数统计特性, 你需要如下几个步骤:</p>
+<ol>
+<li>
+<p>打开 hexo 工作目录</p>
+</li>
+<li>
+<p>npm install hexo-wordcount &ndash;save</p>
+</li>
+<li>
+<p>修改 主题配置文件:</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png"
+        title="字数统计" /></p>
+<h3 id="图片大图展示">图片大图展示</h3>
+<p>进入主题配置文件，搜索<code>fancybox</code>，将值改为<code>true</code>，即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/fancybox.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/fancybox.gif, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/fancybox.gif 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/fancybox.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/fancybox.gif"
+        title="fancybox" /></p>
+<p>当然还有一种方法，那就是进去主题配置文件，搜索<code>medium_zoom</code>的值改为<code>true</code>即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/medium_zoom.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/medium_zoom.gif, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/medium_zoom.gif 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/medium_zoom.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/medium_zoom.gif"
+        title="medium_zoom" /></p>
+<blockquote>
+<p>只能开启一个</p>
+</blockquote>
+<h3 id="pjax">Pjax</h3>
+<p>当用户点击链接，通过ajax更新页面需要变化的部分，然后使用HTML5的pushState修改浏览器的URL地址。这样可以不用重复加载相同的资源（css/js）， 从而提升网页的加载速度。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Pjax</span><span class="w">
+</span><span class="w"></span><span class="c"># It may contain bugs and unstable, give feedback when you find the bugs.</span><span class="w">
+</span><span class="w"></span><span class="c"># https://github.com/MoOx/pjax</span><span class="w">
+</span><span class="w"></span><span class="nt">pjax</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># - xxxx</span><span class="w">
+</span><span class="w">    </span><span class="c"># - xxxx</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pangu">Pangu</h3>
+<p>如果你每次看到网页上的中文字和英文、数字、符号挤在一块，就会坐立难安，忍不住想在它们之间加个空格。这个外挂正是你在网路世界走跳所需要的东西，它会自动替你在网页中所有的中文字和半形的英文、数字、符号之间插入空白。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># https://github.com/vinta/pangu.js</span><span class="w">
+</span><span class="w"></span><span class="c"># Insert a space between Chinese character and English character (中英文之間添加空格)</span><span class="w">
+</span><span class="w"></span><span class="nt">pangu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">field</span><span class="p">:</span><span class="w"> </span><span class="l">site</span><span class="w"> </span><span class="c"># site/post</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>field只支持两个参数，post(只在文章页生效)和site(全站生效)</p>
+</blockquote>
+<h3 id="添加全局吸底aplayer教程">添加全局吸底Aplayer教程</h3>
+<p>进入主题配置文件。</p>
+<h4 id="开启主题的aplayerinject">开启主题的aplayerInject</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Inject the css and script (aplayer/meting)</span><span class="w">
+</span><span class="w"></span><span class="nt">aplayerInject</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">per_page</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="插入aplayer-html">插入Aplayer html</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">inject</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">head</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34;&gt;</span><span class="w">
+</span><span class="w">  </span><span class="nt">bottom</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">&lt;div class=&#34;aplayer no-destroy&#34; data-id=&#34;60198&#34; data-server=&#34;netease&#34; data-type=&#34;playlist&#34; data-fixed=&#34;true&#34; data-autoplay=&#34;true&#34;&gt; &lt;/div&gt;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png"
+        title="音乐播放器" /></p>
+<h3 id="css样式">CSS样式</h3>
+<p>虽然该主题的自定义能力蛮不错，但是总会有一些地方不尽如人意，又因为他也支持CSS样式表来修改，所以我们就来使用CSS样式表来让博客更加美观。</p>
+<p>首先在博客根目录下的<code>source</code>文件夹中创建一个<code>css</code>文件夹，在其中创建一个css样式表文件，名字随意，创建好之后进行添加css样式即可，这里我给出我的css样式表的代码来作为参考。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">#</span><span class="nn">footer</span> <span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 鼠标样式 */</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">cursor</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://cdn.jsdelivr.net/gh/constown/HexoCustomFile/public/cursors/default.cur</span><span class="p">),</span>
+      <span class="kc">default</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">a</span><span class="o">,</span>
+  <span class="nt">img</span> <span class="p">{</span>
+    <span class="k">cursor</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://cdn.jsdelivr.net/gh/constown/HexoCustomFile/public/cursors/pointer.cur</span><span class="p">),</span>
+      <span class="kc">default</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="c">/* 滚动条样式 */</span>
+<span class="p">::</span><span class="nd">-webkit-scrollbar</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">::</span><span class="nd">-webkit-scrollbar-track</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">73</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">::</span><span class="nd">-webkit-scrollbar-thumb</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#49b1f5</span><span class="p">;</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="nb">linear-gradient</span><span class="p">(</span>
+      <span class="mi">45</span><span class="kt">deg</span><span class="p">,</span>
+      <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span> <span class="mi">25</span><span class="kt">%</span><span class="p">,</span>
+      <span class="kc">transparent</span> <span class="mi">25</span><span class="kt">%</span><span class="p">,</span>
+      <span class="kc">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">,</span>
+      <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span> <span class="mi">50</span><span class="kt">%</span><span class="p">,</span>
+      <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span> <span class="mi">75</span><span class="kt">%</span><span class="p">,</span>
+      <span class="kc">transparent</span> <span class="mi">75</span><span class="kt">%</span><span class="p">,</span>
+      <span class="kc">transparent</span>
+    <span class="p">);</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">::</span><span class="nd">-webkit-scrollbar-corner</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">::</span><span class="nd">-moz-selection</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#49b1f5</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>编写好之后，怎么引用这个样式表呢，只需要在主题配置文件中找到<code>inject</code>，修改<code>head</code>，将css样式表引用进去即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">inject</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">head</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34;&gt;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结语">结语</h2>
+<p>至此，butterfly主题的hexo个人静态博客就到此结束了，如果还有什么需求，可以先去主题官方文档中查看，之后再去网上搜索。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本篇文章参考<a href="https://butterfly.js.org/posts/4aa8abbe/" target="_blank" rel="noopener noreffer ">官方文档</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" data-title="创建Hexo博客之Hexo主题配置2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" data-title="创建Hexo博客之Hexo主题配置2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" data-title="创建Hexo博客之Hexo主题配置2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" data-title="创建Hexo博客之Hexo主题配置2"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" class="prev" rel="prev" title="创建Hexo博客之Hexo主题配置1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>创建Hexo博客之Hexo主题配置1</a>
+            <a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" class="next" rel="next" title="创建Hexo博客之主题安装与基本配置">创建Hexo博客之主题安装与基本配置<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

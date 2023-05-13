@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>从零开始搭建个人博客之hugo托管GitHubPages - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="从零开始搭建个人博客之hugo托管GitHubPages" />
+<meta property="og:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T16:48:52+08:00" />
+<meta property="article:modified_time" content="2023-03-20T16:48:52+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="从零开始搭建个人博客之hugo托管GitHubPages"/>
+<meta name="twitter:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" /><link rel="prev" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" /><link rel="next" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从零开始搭建个人博客之hugo托管GitHubPages",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages\/"
+        },"genre": "posts","wordcount":  3442 ,
+        "url": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages\/","datePublished": "2023-03-20T16:48:52+08:00","dateModified": "2023-03-20T16:48:52+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">从零开始搭建个人博客之hugo托管GitHubPages</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hugo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>hugo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3442 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#整体流程">整体流程</a></li>
+    <li><a href="#具体流程">具体流程</a>
+      <ul>
+        <li><a href="#创建-github-pages">创建 GItHub Pages</a></li>
+        <li><a href="#搭建-hugo-站点">搭建 Hugo 站点</a>
+          <ul>
+            <li><a href="#hugo-站点和目标文件">Hugo 站点和目标文件</a></li>
+            <li><a href="#将博客部署到-github-pages">将博客部署到 GitHub Pages</a></li>
+            <li><a href="#将源文件上传到-github">将源文件上传到 GitHub</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo</a>是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hugo使用Go语言编写，因此它非常快。Hugo的主要优点是构建速度非常快，因为它是一个静态网站生成器，没有必要运行数据库或其他服务。</p>
+<p>使用Hugo创建个人博客的主要优势在于它非常快速、易于配置，并且生成的网站可以直接部署到任何Web服务器上，而不需要运行数据库或其他服务。此外，Hugo提供了大量的主题和插件，可以轻松地自定义您的个人博客。它还支持各种文本格式，包括Markdown，AsciiDoc和Org-mode，以及多种语言，包括中文。</p>
+<h2 id="整体流程">整体流程</h2>
+<ol>
+<li>写 Markdown 文件；</li>
+<li>通过 hugo 架构提供的语法将 Markdown 文件编译成 HTML 文件，HTML文件就是在浏览器中可以展示的文件格式；</li>
+<li>把编译出来的 HTML 文件发布到服务器或者网站托管平台；</li>
+</ol>
+<p>我们可以通过上面简单的三步骤生成一个只属于自己的个人博客，是不是感觉非常的简单呢，那跟着我一起来使用 hugo 搭建一个属于自己的个人博客吧。</p>
+<h2 id="具体流程">具体流程</h2>
+<p>在上一篇博客中，我们已经简单的学习了一下如何搭建个人博客，在这一篇博客中，我们来学习一下如何将我们搭建的个人博客托管到 GitHub Pages 中，首先我们先来了解一下什么是 GitHub Pages。</p>
+<p>GitHub Pages 是一项服务，它允许用户将静态网站托管在 GitHub 上。用户可以使用 GitHub Pages 来托管个人博客、项目文档、用户手册等等。GitHub Pages 支持多种静态网站生成器，包括 Jekyll、Hugo、Hexo 等等。它还提供了自定义域名的选项，因此用户可以使用自己的域名来访问他们的网站。GitHub Pages 是完全免费的，但是需要遵守GitHub的使用规则和政策。</p>
+<p>我们了解了什么是 GitHub Pages 之后，那么我们为什么要放到 GitHub Pages 里面呢，是因为我们现在搭建的仅仅只是能使用在自己的电脑中，如果换一个电脑之后，我们就不能访问了，因此我们需要一个托管平台，因此我们就将文件托管到 GitHub Pages 中。</p>
+<p>现在我们已经了解了原因之后就开始今天的学习吧。</p>
+<h3 id="创建-github-pages">创建 GItHub Pages</h3>
+<p>首先要想使用 Github Pages，就必须要有一个 GitHub 账号，如果没有 Github 账号，可以<a href="https://www.github.com" target="_blank" rel="noopener noreffer ">点击此链接</a>跳转注册一个。</p>
+<p>当我们登录 Github 之后，点击 New 创建一个新的 Repository ，命名为 {your_username}.github.io ，记住，这里的名字一定是你的用户名，如果不是的话，会无法进行下一步操作。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-1.png"
+        title="image2-1" /></p>
+<p>因为我这里已经创建好了，因此它会报问题，格外需要注意的是 Repo 的权限一定是要 公开的，也就是一定要选择 Public ，因为如果选择了 Private ，后面就会出现无法访问的问题，同时也可以勾选上 <code>Add a README.md</code> ，这样做的原因是为了自动创建 main 分支。</p>
+<p>然后找到你刚刚创建好的仓库，点进去，选择上面的 Settings ，在左边的菜单栏中选择 Pages ，如果跟我的不一样，没有关系，这是因为 Github Pages 还在自动帮我们部署网站，只需要稍等片刻即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-2.png"
+        title="image2-2" /></p>
+<p>当你看到你的 Page 页面上出现 Your site is live at https://********.github.io/ 时就说明你的 GitHub Pages 自动部署好了，这时点击 Visit Site 就可以看到我们的网站了，当然了因为这时候我们的仓库中空的，所以这时候的网站也是空的，只会显示 yourusername.github.io 。</p>
+<h3 id="搭建-hugo-站点">搭建 Hugo 站点</h3>
+<h4 id="hugo-站点和目标文件">Hugo 站点和目标文件</h4>
+<p>现在我们有了<code>Hugo</code>个人站点，有了<code>Github Pages</code>，那么下一步就是把 hugo 博客发布到 GitHub 。这样我们才能在互联网的任何地方访问我们的博客。</p>
+<p>在我们本地的 Hugo 根目录中执行 Hugo 指令。会生成一个 Public 文件夹，我们只需要把 Public 的文件夹上传到 Github 上刚才创建的<code>Github</code>仓库里面, 一分钟左右，就能正常查看博客内容。</p>
+<blockquote>
+<p>hugo 站点（ hugo 根目录）：这个是源文件，也就是你写 Markdown 的地方，可以不用提交到GitHub，也可以选择在 GitHub 上创建一个新的 Repo ，并提交。</p>
+<p>public 文件（ hugo/public ）：这个是目标文件，是使用 hugo 指令生成的发布 HTML 内容，可以在浏览器浏览的格式，需要推送到 GitHub 上然后发布到 GitHub Pages 静态网站。</p>
+</blockquote>
+<p>我们的Hugo站点是<strong>源文件</strong>（带主题、图片、Markdown 源文件），public 是<strong>目标文件</strong>（最终生成的 css/js 或者是 html 文件）。我们最终需要在网页上展示的是目标文件，所以我们需要使用 Hugo 命令生成目标文件。</p>
+<h4 id="将博客部署到-github-pages">将博客部署到 GitHub Pages</h4>
+<p>在任何 Hugo 站点外（也就是根目录的上级目录处，为什么要出根目录之外进行，是因为方便我们之后将源文件也上传到 GitHub 一份，Git 是不能有层级的，因此我们需要放到站点外面），直接用 Git Clone 将创建好的 <code>GitHub仓库</code>克隆上来。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ../
+git clone git@github.com:qichenxiaoni/qichenxiaoni.github.io.git
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>复杂一点但是后续方便的办法：</strong> 为了不要每一次改动之后都要手动复制一次，我们可以创建一个 public 目录和 GitHub 仓库的软链接（需要注意的是我们需要先删除根目录下的 public 文件夹）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 进入 Hugo 根目录</span>
+<span class="nb">cd</span> ~/Docments/Code <span class="se">\ </span>TMP/qichenxiaoni
+<span class="c1"># 删除 public 文件夹</span>
+rm -rf public
+<span class="c1"># 前面是 GitHub.io 仓库，后面是 public 文件的本地目录</span>
+ln -s ~/Documents/Code<span class="se">\ </span>TMP/qichenxiaoni.github.io ~/Documents/Code<span class="se">\ </span>TMP/qichenxiaoni/public
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在<code>hugo站点</code>使用 hugo 指令，就会自动在 public 软链接也就是 git repo 下生成目标文件。</p>
+<p>最终执行<code>git add/commit/push</code>之后，打开 <a href="https://qichenxiaoni.github.io/" target="_blank" rel="noopener noreffer ">https://qichenxiaoni.github.io/</a> 就能看到博客内容。 (可能有几分钟延迟，耐心等待)。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-3.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-3.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-3.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-3.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-3.png"
+        title="image2-3" /></p>
+<p>当我们修改了博客的内容时，如果我们没有脚本来自动上传，那么我们可以执行以下命令来上传更新博客。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">详细步骤：
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ hugo
+
+<span class="nb">cd</span> ~/Documents/Code<span class="se">\ </span>TMP/qichenxiaoni.github.io/
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ ls  <span class="c1">#(这一句可要可不要)</span>
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git status
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git add *
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git status
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git commit -m <span class="s2">&#34;two commit&#34;</span>
+
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git push
+</code></pre></td></tr></table>
+</div>
+</div><p>如果在执行<code>Git commit -m “first commit”</code>的时候报错，显示作者身份未知，显示如下信息的时候，我们可以根据上面的提示，分别执行下面这两条命令之后再执行一次<code>Git commit -m “first commit”</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-4.png"
+        title="image2-4" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">git config --global user.email <span class="s2">&#34;you@example.com&#34;</span><span class="o">(</span>注册GitHub的邮箱<span class="o">)</span>
+git config --global user.name <span class="s2">&#34;Your Name&#34;</span> <span class="o">(</span>Github的用户名<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果在执行 Git Push 的时候报错显示没有权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ERROR: Permission to left-pocket-test/left-pocket-test.github.io.git denied to left-pocket.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+</code></pre></td></tr></table>
+</div>
+</div><p>解决的办法十分的简单，只需要我们在 GitHub 中添加一下密钥文件就可以了，接下来我会给出在 Linux 中和 Windows 和 Mac 中如何生成密钥文件</p>
+<p>首先是在 Linux 中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/.ssh
+ssh-keygen -t rsa -C <span class="s2">&#34;xxx@xxx.com&#34;</span> <span class="c1">#填写自己的邮箱地址</span>
+<span class="c1">#之后按Enter一直回车即可</span>
+cat ~/.ssh/id_rsa.pub
+<span class="c1">#复制里面的内容粘贴到github中即可(点击右上角头像Settings-&gt;SSH and GPG Keys-&gt;add SSH Key.)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在 Windows 和 Mac 中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">1. 在 Windows 中打开 Git Bash 终端。
+2. 在终端中输入以下命令，并按 Enter 键：
+    ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;your_email@example.com&#34;</span>
+这个命令会创建一个新的 SSH 密钥文件，您需要将 <span class="s2">&#34;your_email@example.com&#34;</span> 替换为您自己的电子邮件地址。
+3. 然后，您将被要求输入一个文件名，用于保存密钥文件。您可以接受默认文件名，或者指定一个您自己喜欢的名称。
+4. 接下来，您将被要求输入一个密码短语。这个密码短语将加密您的私钥，确保只有您可以访问它。当您输入密码短语时，终端不会显示任何内容，所以请确保您输入的正确。
+5. 最后，您将获得一个公钥和一个私钥文件。您的公钥文件将位于 <span class="s2">&#34;~/.ssh/id_rsa.pub&#34;</span>，您的私钥文件将位于 <span class="s2">&#34;~/.ssh/id_rsa&#34;</span>。请注意，您的私钥文件必须始终保持机密，所以请确保将其保存在安全的地方。
+
+如果是 mac 的话，步骤跟 windows 的是一样的，这里就不重复说明了。
+
+当我们生成密钥文件之后，回到 Github 中，点击右上角的头像，找到Settings，找到左边菜单栏中的<span class="sb">`</span>SSH and GPG keys<span class="sb">`</span> ，选择<span class="sb">`</span>New SSH key<span class="sb">`</span>，将密钥文件的内容复制进去即可。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="将源文件上传到-github">将源文件上传到 GitHub</h4>
+<p>为什么我们要将源文件发布到Github中呢，是因为防止本地电脑的硬盘损坏或者文件丢失等风险，因此我们可以在Github中新创一个仓库用来保存源文件，同时如果以后个人博客需要多人的时候也支持多人协作，当然了源文件对于最后的成品展示没有任何影响，简而言之就是如果有需求的可以跟着弄一遍，如果没有这方面需求的，可以直接跳过。</p>
+<p>步骤跟前面创建Repo是一样的，只是名称可以随意改动，不需要勾选生成README.md文件，由于我们没有选择生成文件，因此这时候的仓库是没有任何东西的，同时创建完之后GIthub也会提醒你如何使用指令将本地内容上传至Github中。</p>
+<p><strong>具体步骤：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#在源文件目录（就是后面不带github.io）</span>
+<span class="nb">echo</span> <span class="s2">&#34;# qichenxiaoni.github.io&#34;</span> &gt;&gt; README.md
+git init
+git add *
+git commit -m <span class="s2">&#34;first commit&#34;</span>
+git branch -M main
+git remote add origin git@github.com:qichenxiaoni/qichenxiaoniio.git
+git push -u origin main
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你在执行<code>Git add *</code>这一条指令的时候出现这一类消息的时候，可以使用 git status ，如果执行完 git status 之后，显示有未跟踪的文件，可以单独使用<code>git add ‘文件名’</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-5.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-5.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-5.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-5.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2-5.png"
+        title="image2-5" /></p>
+<p>这个时候你的源文件就上传到Github的一个新的仓库了。这是用来保存源文件的。而**{your_username}.github.io**是用来保存网站的目标文件的。</p>
+<p>由于有人不了解如何在修改了源文件之后保存到Github中，因此下面是具体步骤：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#当修改了源文件需要保存的时候，详细步骤：</span>
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ hugo new about/index.md
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ git status
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ git add *
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ git status
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ git commit -m <span class="s2">&#34;two commit&#34;</span>
+cn@Resucer:~/Documents/Code TMP/qichenxiaoni$ git push
+</code></pre></td></tr></table>
+</div>
+</div><p>&lt;全文完&gt;</p>
+<blockquote>
+<p>本文参考教程：<a href="https://www.leftpocket.cn/post/hugo/hugo_github/" target="_blank" rel="noopener noreffer ">码农在新加坡的个人博客</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" data-title="从零开始搭建个人博客之hugo托管GitHubPages"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" data-title="从零开始搭建个人博客之hugo托管GitHubPages"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" data-title="从零开始搭建个人博客之hugo托管GitHubPages"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" data-title="从零开始搭建个人博客之hugo托管GitHubPages"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" class="prev" rel="prev" title="从零开始搭建个人博客之使用hugo创建个人站点"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>从零开始搭建个人博客之使用hugo创建个人站点</a>
+            <a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" class="next" rel="next" title="从零开始搭建个人博客之hugo部署Vercel">从零开始搭建个人博客之hugo部署Vercel<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>创建Hexo博客之Hexo安装 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="创建Hexo博客之Hexo安装" />
+<meta property="og:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T21:12:43+08:00" />
+<meta property="article:modified_time" content="2023-04-19T21:12:43+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="创建Hexo博客之Hexo安装"/>
+<meta name="twitter:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" /><link rel="prev" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87/" /><link rel="next" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "创建Hexo博客之Hexo安装",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85\/"
+        },"genre": "posts","wordcount":  2336 ,
+        "url": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85\/","datePublished": "2023-04-19T21:12:43+08:00","dateModified": "2023-04-19T21:12:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">创建Hexo博客之Hexo安装</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hexo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hexo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2336 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#安装hexo">安装Hexo</a></li>
+        <li><a href="#简单配置">简单配置</a></li>
+        <li><a href="#上传github">上传GitHub</a>
+          <ul>
+            <li><a href="#创建仓库">创建仓库</a></li>
+            <li><a href="#配置秘钥以及git">配置秘钥以及git</a>
+              <ul>
+                <li><a href="#配置秘钥">配置秘钥</a></li>
+                <li><a href="#配置git">配置git</a></li>
+                <li><a href="#测试">测试</a></li>
+              </ul>
+            </li>
+            <li><a href="#上传文件">上传文件</a>
+              <ul>
+                <li><a href="#github-pages部署">GitHub Pages部署</a></li>
+                <li><a href="#源文件上传">源文件上传</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener noreffer ">Hexo</a>是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。</p>
+<p>Hexo的主要特征包括以下几点：</p>
+<ol>
+<li>快速：Hexo采用了缓存机制和异步渲染技术，生成速度非常快；</li>
+<li>简单易用：Hexo的配置非常简单，它支持大量的<a href="https://hexo.io/themes/" target="_blank" rel="noopener noreffer ">主题</a>和<a href="https://hexo.io/plugins/" target="_blank" rel="noopener noreffer ">插件</a>，使得用户可以快速打造自己的个性化博客；</li>
+<li>Markdown支持： Hexo支持使用Markdown语法来编写文章，并且可以直接在命令行界面预览效果；</li>
+<li>多平台支持：Hexo可以发布到多种平台，例如：Github Pages、HeroKu以及Netlity等等；</li>
+<li>插件丰富：Hexo有大量的插件可以供选择，如SEO优化、社交分享等，可以很大程度上满足用户的各种需求；</li>
+</ol>
+<p>总而言之，Hexo是一款非常优秀的博客生成器，它能够让用户快速地创建自己的博客网站，并提供了十分丰富的主题和插件来满足用户的需求。</p>
+<h2 id="安装">安装</h2>
+<p>首先在最开始，需要确保我们电脑中有git工具和node.js，以及已经配置好了npm的淘宝镜像或者是cnpm，如果没有配置好，可以参考我上一篇博客，<a href="https://www.chenxiaoni.work/2023/04/16/%E5%88%9B%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87/" target="_blank" rel="noopener noreffer ">创建Hexo博客之前期准备</a>，如果已经配置好一切，那么请继续。</p>
+<h3 id="安装hexo">安装Hexo</h3>
+<p>创建一个文件夹，在任何地方都可以，我们可已经其命名为Blog，然后在代码编辑器里面将这个文件夹打开（这里我使用的是VSCode），并打开其终端。</p>
+<p>在终端中输入<code>npm install hexo -g</code>进行全局安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 安装Hexo
+npm install hexo -g
+# 查看是否安装成功
+hexo version
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%A3%80%E6%B5%8Bhexo%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%A3%80%E6%B5%8Bhexo%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%A3%80%E6%B5%8Bhexo%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%A3%80%E6%B5%8Bhexo%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%A3%80%E6%B5%8Bhexo%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png"
+        title="检测hexo是否安装成功" /></p>
+<p>在我们安装完成之后，接下来就可以进行初始化项目的操作了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 进入Blog文件夹中，输入
+hexo init
+</code></pre></td></tr></table>
+</div>
+</div><p>在初始化的之后，可能会出现Blog文件夹中没有<code>node_modules</code>文件夹，当出现这个情况的时候，我们可以执行<code>npm install</code>的命令安装所需要的依赖文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm install
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96.png"
+        title="安装所需要的依赖" /></p>
+<p>当我们执行完上面的所有步骤之后，我们就可以运行指令查看初步的hexo个人博客是否搭建成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 清除缓存
+hexo clean
+# 重新生成文件
+hexo g
+# 运行
+hexo s
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo%E8%BF%90%E8%A1%8C.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo%E8%BF%90%E8%A1%8C.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo%E8%BF%90%E8%A1%8C.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo%E8%BF%90%E8%A1%8C.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/hexo%E8%BF%90%E8%A1%8C.png"
+        title="hexo运行" /></p>
+<p>如果能顺利执行以上的命令并且出现<code>http://localhost:4000</code>的时候就证明已经运行成功了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.png"
+        title="查看是否成功运行" /></p>
+<blockquote>
+<p>如果想要退出本地发布，可以在终端中输入Ctrl+C来停止。</p>
+</blockquote>
+<p>至此，Hexo的安装就告一段落了，接下来我们对博客的配置文件进行简单的修改吧。</p>
+<h3 id="简单配置">简单配置</h3>
+<p>进入Blog文件夹中找到<code>_config.yml</code>文件，可以根据我的来修改你以下的配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">title: &#39;小陈的博客&#39;  ## 博客名字
+subtitle: &#39;一个想摆烂的代码人&#39; ## 博客的副标题
+description: &#39;欢迎来到摆烂的代码世界&#39; ## 头像下面的个人短介
+keywords: Blog  ##博客的关键字
+author: Chen  ## 作者名字
+language: zh-CN  ## 显示语言类型
+timezone: &#39;&#39;   ## 时区
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as &#39;https://username.github.io/project&#39;
+url: http://qichenni.github.io
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5%E8%AE%BE%E7%BD%AE.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5%E8%AE%BE%E7%BD%AE.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5%E8%AE%BE%E7%BD%AE.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5%E8%AE%BE%E7%BD%AE.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5%E8%AE%BE%E7%BD%AE.png"
+        title="博客初步设置" /></p>
+<p>**注意：**修改完之后重新运行推荐执行<code>hexo clean</code>、<code>hexo g</code>以及<code>hexo s</code>，因为有时候可能会在你修改之后运行不生效，需要清除缓存之后重新生成之后再发布出去。不过我们修改根目录下的<code>package.json</code>文件，找到<code>&quot;server&quot;</code>，修改后面的值，在原本的<code>hexo server</code>前面加上<code>hexo clean 和 hexo generate</code>，在它们三个之间一定要加上<code>&amp;&amp;</code>来表示并。</p>
+<h3 id="上传github">上传GitHub</h3>
+<p>到目前为止，我们所做的个人博客还仅仅只能是本地查看，不能让其他人看到，那怎么能出去装呢，所以我们这时候可以使用 <code>Github Pages</code>这项功能来实现，并且我们也可以将源代码上传到github上，这样就可以预防当我们换设备之后也可以很快的获取原来的文件，而不用重新再弄一次。</p>
+<h4 id="创建仓库">创建仓库</h4>
+<p>新建一个名为你的用户名.github.io 的仓库，如果你的 github 用户名是 test，那么你就新建 test.github.io 的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a href="http://test.github.io" target="_blank" rel="noopener noreffer ">http://test.github.io</a> 了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BAgithub.io%E4%BB%93%E5%BA%93.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BAgithub.io%E4%BB%93%E5%BA%93.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BAgithub.io%E4%BB%93%E5%BA%93.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BAgithub.io%E4%BB%93%E5%BA%93.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BAgithub.io%E4%BB%93%E5%BA%93.png"
+        title="创建github.io仓库" /></p>
+<p>然后再创建一个存储博客源代码的仓库，这个仓库的命名没有任何要求，甚至仓库的状态是公开还是私密都没有什么影响。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BA%E6%BA%90%E6%96%87%E4%BB%B6%E4%BB%93%E5%BA%93.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BA%E6%BA%90%E6%96%87%E4%BB%B6%E4%BB%93%E5%BA%93.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BA%E6%BA%90%E6%96%87%E4%BB%B6%E4%BB%93%E5%BA%93.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BA%E6%BA%90%E6%96%87%E4%BB%B6%E4%BB%93%E5%BA%93.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E5%88%9B%E5%BB%BA%E6%BA%90%E6%96%87%E4%BB%B6%E4%BB%93%E5%BA%93.png"
+        title="创建源文件仓库" /></p>
+<p>因为我们没有勾选自动生成README.md文件，所以仓库一创建，就会告诉你不同情况如何上传文件。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png"
+        title="仓库上传文件步骤" /></p>
+<h4 id="配置秘钥以及git">配置秘钥以及git</h4>
+<h5 id="配置秘钥">配置秘钥</h5>
+<p>进入终端，创建SSH key，（我是linux系统下，不同系统在这一步有不同设置）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 进入.ssh文件夹
+cd ~/.ssh
+# 生成秘钥文件（邮箱地址可写可不写）
+ssh-keygen -t rsa -C &#34;你的邮箱地址&#34;
+# 查看生成的秘钥文件
+cat ~/.ssh/id_rsa.pub
+# 复制秘钥
+</code></pre></td></tr></table>
+</div>
+</div><p>复制好生成的秘钥之后，回到github上，进入settings里面，点击左边栏中的<code>SSH and GPG keys</code>，进去之后，点击右上角的<code>New SSH key</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh1.png"
+        title="配置ssh1" /></p>
+<p>进去之后，将生成的内容复制进去，点击<code>Add SSH key</code>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E9%85%8D%E7%BD%AEssh2.png"
+        title="配置ssh2" /></p>
+<p>至此，ssh的配置就完成了，接下来就需要配置一下git。</p>
+<h5 id="配置git">配置git</h5>
+<p>进入终端，执行以下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 配置用户名
+git config --global user.name &#34;Your Name&#34;
+# 配置邮箱
+git config --global user.email &#34;Your Email&#34;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>如果你有多个git账号，可以不加<code>--global</code>这个属性，不加这个属性就不会全局应用。</p>
+</blockquote>
+<h5 id="测试">测试</h5>
+<p>当我们全部都弄完之后，进入终端执行以下命令，查看返回的信息。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh -T git@github.com
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/git%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/git%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/git%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/git%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/git%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.png"
+        title="git身份验证" /></p>
+<p>当返回如下信息，就证明配置成功了。</p>
+<h4 id="上传文件">上传文件</h4>
+<h5 id="github-pages部署">GitHub Pages部署</h5>
+<p>将本地的文件部署到GIthub，需要先修改根目录下的<code>_config.yml</code>文件，滑到最底部，修改<code>deploy</code>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE1.png"
+        title="上传配置1" /></p>
+<p>修改之后，还需要安装一个插件才能上传</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm install hexo-deployer-git --save
+</code></pre></td></tr></table>
+</div>
+</div><p>安装玩插件之后，执行以下命令即可完成。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 清除缓存
+hexo clean
+# 重新生成文件
+hexo g
+# 发布
+hexo d
+</code></pre></td></tr></table>
+</div>
+</div><p>完成之后，在浏览器中输入<code>https://your.github.io</code>，查看是否发布成功。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/github.io.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/github.io.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/github.io.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/github.io.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/github.io.png"
+        title="github.io" /></p>
+<h5 id="源文件上传">源文件上传</h5>
+<p>源文件上传就比较简单了，直接根据仓库给出的命令执行一次即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/%E4%BB%93%E5%BA%93%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%AD%A5%E9%AA%A4.png"
+        title="仓库上传文件步骤" /></p>
+<p>如果你想要从github中下载源文件使用，只需要<code>git clone 项目地址</code>，下载下来之后使用 <code>hexo init</code> 格式化文件夹和<code>npm install</code>下载依赖。</p>
+<p>到此，这篇文章的内容就结束了。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文参考文档<a href="https://blog.juanertu.com/archives/e3dc5cbb.html" target="_blank" rel="noopener noreffer ">ConstOwn</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" data-title="创建Hexo博客之Hexo安装"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" data-title="创建Hexo博客之Hexo安装"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" data-title="创建Hexo博客之Hexo安装"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E5%AE%89%E8%A3%85/" data-title="创建Hexo博客之Hexo安装"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87/" class="prev" rel="prev" title="创建Hexo博客之前期准备"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>创建Hexo博客之前期准备</a>
+            <a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE1/" class="next" rel="next" title="创建Hexo博客之Hexo主题配置1">创建Hexo博客之Hexo主题配置1<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

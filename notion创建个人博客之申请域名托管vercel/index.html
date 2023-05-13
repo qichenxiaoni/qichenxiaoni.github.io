@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Notion创建个人博客之项目托管Vercel - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="Notion创建个人博客之项目托管Vercel" />
+<meta property="og:description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T17:57:33+08:00" />
+<meta property="article:modified_time" content="2023-03-20T17:57:33+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="Notion创建个人博客之项目托管Vercel"/>
+<meta name="twitter:description" content="前言 当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" /><link rel="prev" href="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" /><link rel="next" href="http://example.org/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Notion创建个人博客之项目托管Vercel",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel\/"
+        },"genre": "posts","wordcount":  1434 ,
+        "url": "http:\/\/example.org\/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel\/","datePublished": "2023-03-20T17:57:33+08:00","dateModified": "2023-03-20T17:57:33+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Notion创建个人博客之项目托管Vercel</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/notion/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Notion</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1434 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#开发流程">开发流程</a>
+      <ul>
+        <li><a href="#克隆项目">克隆项目</a></li>
+        <li><a href="#托管vercel平台">托管Vercel平台</a></li>
+        <li><a href="#简易博客配置">简易博客配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>当今个人博客盛行，人们都想要有一个属于自己的个人博客，但是很多人苦于没有编程基础或不想使用代码来制作一个个人博客，但好在现在有一种方式可以不用敲一行代码就可以制作出一个属于自己的个人博客，只需要有一个Notion账号，Github账号以及Vercel账号就可以实现了。那么废话就不多说了，开始本次的教程吧！</p>
+<h2 id="开发流程">开发流程</h2>
+<h3 id="克隆项目">克隆项目</h3>
+<p>首先我们需要有一个github账号，如果没有也可以先打开<a href="https://www.github.com" target="_blank" rel="noopener noreffer ">github</a>页面再进行注册登录。</p>
+<p>登陆之后，我们在左上角输入NotionNext搜索，也可以点击<a href="https://github.com/tangly1024/NotionNext" target="_blank" rel="noopener noreffer ">此链接</a>直接跳转到NotionNext，然后点击右上角的Fork按钮，在下拉菜单中选择Create Fork，这样就会拷贝一份代码到你的github中。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-1.png"
+        title="image6-1" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-2.png"
+        title="image6-2" /></p>
+<p>这份代码就是我们将Notion搭建为个人博客网站的关键，这个<code>NotionNext</code>调用了Notion的API来展示Notion的页面，同时也提供了一些主题和特效来定制化我们自己的个人网站效果。</p>
+<p>对于这份代码仓库，我们基本可以不用做什么改动，只需要对<code>blog.config.js</code>这份文件进行修改，因为这份文件是所有主题特效的详细配置文件。</p>
+<h3 id="托管vercel平台">托管Vercel平台</h3>
+<p>首先我们依旧需要一个Vercel账号，如果没有Vercel的账号，可以直接在浏览器中输入https://vercel.com/，也可以直接点击<a href="https://vercel.com/" target="_blank" rel="noopener noreffer ">Vercel</a>，进行登录，温馨提示：建议使用github账号注册，这样方便我们从github仓库中导入<code>NotionNext</code>。</p>
+<p>登录之后我们需要做的第一件事就是新建项目，点击<code>New Project</code>，</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-3.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-3.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-3.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-3.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-3.png"
+        title="image6-3" /></p>
+<p>导入git仓库，可以全部导入，也可以指定导入的仓库。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-4.png"
+        title="image6-4" /></p>
+<p>在仓库列表中选择<code>NotionNext</code>并点击<code>Import</code>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-5.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-5.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-5.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-5.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-5.png"
+        title="image6-5" /></p>
+<p>Import之后，我们基本上没有什么需要修改的了，只需要我们在<code>Environment variables</code>中添加一条记录即可。Name：<code>NOTION_PAGE_ID</code> Values：<code>34889e026fc44f7eb074c3847a052020</code>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-6.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-6.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-6.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-6.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-6.png"
+        title="image6-6" /></p>
+<p>这里的值是我们从Notion里发布出去的链接中的中间部分，也就是这一部分</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-7.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-7.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-7.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-7.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-7.png"
+        title="image6-7" /></p>
+<p>弄好之后点击Deploy进行部署，等待几分钟，就可以部署成功了</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-8.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-8.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-8.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-8.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-8.png"
+        title="image6-8" /></p>
+<p>然后点击Vist，可能会出现访问不上的问题，但是没关系，我们可以申请域名来绑定个人网站，这样我们就可以访问了。</p>
+<h3 id="简易博客配置">简易博客配置</h3>
+<p>进入github仓库找到我们刚刚克隆下来的<code>NotionNext</code>，进入仓库找到<code>blog.config.js</code>文件进行修改，特别注意的是，我们在GItHub上的修改是不需要到Vercel上再次部署的，Vercel会监听github上的修改，自动自行部署的。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-9.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-9.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-9.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-9.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-9.png"
+        title="image6-9" /></p>
+<p>点击blog.config.js文件</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-10.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-10.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-10.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-10.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-10.png"
+        title="image6-10" /></p>
+<p>点击右上角的笔的图标，这样就可以进行修改了，主要看个人喜好，以下是我个人配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">修改主题</span>
+<span class="nx">THEME</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_THEME</span> <span class="o">||</span> <span class="s1">&#39;hexo&#39;</span><span class="p">,</span> <span class="c1">// 主题， 支持 [&#39;next&#39;,&#39;hexo&#39;,&#34;fukasawa&#39;,&#39;medium&#39;,&#39;example&#39;] @see https://preview.tangly1024.com
+</span><span class="c1"></span><span class="nx">修改个人信息</span>
+  <span class="nx">AUTHOR</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_AUTHOR</span> <span class="o">||</span> <span class="s1">&#39;Chen&#39;</span><span class="p">,</span> <span class="c1">// 您的昵称 例如 tangly1024
+</span><span class="c1"></span>  <span class="nx">BIO</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_BIO</span> <span class="o">||</span> <span class="s1">&#39;一个迷茫的摆烂人&#39;</span><span class="p">,</span> <span class="c1">// 作者简介
+</span><span class="c1"></span>  <span class="nx">LINK</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_LINK</span> <span class="o">||</span> <span class="s1">&#39;https://tangly1024.com&#39;</span><span class="p">,</span> <span class="c1">// 网站地址
+</span><span class="c1"></span>  <span class="nx">修改特效是否开启</span>
+    <span class="c1">// 鼠标点击烟花特效
+</span><span class="c1"></span>  <span class="nx">FIREWORKS</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_FIREWORKS</span> <span class="o">||</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 开关
+</span><span class="c1"></span>  <span class="c1">// 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
+</span><span class="c1"></span>  <span class="nx">FIREWORKS_COLOR</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;255, 20, 97&#39;</span><span class="p">,</span> <span class="s1">&#39;24, 255, 146&#39;</span><span class="p">,</span> <span class="s1">&#39;90, 135, 255&#39;</span><span class="p">,</span> <span class="s1">&#39;251, 243, 140&#39;</span><span class="p">],</span>
+
+  <span class="c1">// 樱花飘落特效
+</span><span class="c1"></span>  <span class="nx">SAKURA</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_SAKURA</span> <span class="o">||</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 开关
+</span><span class="c1"></span>  <span class="nx">是否开启音乐插件</span>
+    <span class="nx">MUSIC_PLAYER</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_MUSIC_PLAYER</span> <span class="o">||</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否使用音乐播放插件
+</span></code></pre></td></tr></table>
+</div>
+</div><p>修改完之后滑到最下端，点击<code>Commit changes</code>，保存修改。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-11.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-11.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-11.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-11.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-11.png"
+        title="image6-11" /></p>
+<p>等待几分钟，让Vercel自动部署网站，之后我们可以访问网站查看效果。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-12.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-12.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-12.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-12.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image6-12.png"
+        title="image6-12" /></p>
+<p>我们可以发现修改已经生效了。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文至此就结束了，如果还有不懂的可以看<a href="https://www.leftpocket.cn/post/notion/vercel/" target="_blank" rel="noopener noreffer ">码农在新加坡</a>的教程。</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" data-title="Notion创建个人博客之项目托管Vercel"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" data-title="Notion创建个人博客之项目托管Vercel"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" data-title="Notion创建个人博客之项目托管Vercel"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1vercel/" data-title="Notion创建个人博客之项目托管Vercel"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="Notion创建个人博客之个人博客项目绑定域名"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Notion创建个人博客之个人博客项目绑定域名</a>
+            <a href="/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" class="next" rel="next" title="Hugo个人博客更换主题">Hugo个人博客更换主题<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

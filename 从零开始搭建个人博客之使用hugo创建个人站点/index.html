@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>从零开始搭建个人博客之使用hugo创建个人站点 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="从零开始搭建个人博客之使用hugo创建个人站点" />
+<meta property="og:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T11:29:00+08:00" />
+<meta property="article:modified_time" content="2023-03-20T11:29:00+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="从零开始搭建个人博客之使用hugo创建个人站点"/>
+<meta name="twitter:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" /><link rel="next" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从零开始搭建个人博客之使用hugo创建个人站点",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9\/"
+        },"genre": "posts","wordcount":  2561 ,
+        "url": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9\/","datePublished": "2023-03-20T11:29:00+08:00","dateModified": "2023-03-20T11:29:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">从零开始搭建个人博客之使用hugo创建个人站点</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hugo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>hugo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2561 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#整体流程">整体流程</a></li>
+    <li><a href="#具体流程">具体流程</a>
+      <ul>
+        <li><a href="#安装hugo">安装hugo</a></li>
+        <li><a href="#创建站点">创建站点</a></li>
+        <li><a href="#设置主题">设置主题</a>
+          <ul>
+            <li><a href="#安装主题">安装主题</a></li>
+            <li><a href="#配置主题">配置主题</a></li>
+            <li><a href="#创建第一篇博客">创建第一篇博客</a></li>
+            <li><a href="#发布博客">发布博客</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo</a>是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hugo使用Go语言编写，因此它非常快。Hugo的主要优点是构建速度非常快，因为它是一个静态网站生成器，没有必要运行数据库或其他服务。</p>
+<p>使用Hugo创建个人博客的主要优势在于它非常快速、易于配置，并且生成的网站可以直接部署到任何Web服务器上，而不需要运行数据库或其他服务。此外，Hugo提供了大量的主题和插件，可以轻松地自定义您的个人博客。它还支持各种文本格式，包括Markdown，AsciiDoc和Org-mode，以及多种语言，包括中文。</p>
+<h2 id="整体流程">整体流程</h2>
+<ol>
+<li>
+<p>书写Markdown文件；</p>
+</li>
+<li>
+<p>通过hugo架构提供的语法将Markdown文件编译成HTML文件，HTML文件就是在浏览器中可以展示的文件；</p>
+</li>
+<li>
+<p>把编译出来的HTML文件发布到服务器或网站托管平台；</p>
+</li>
+</ol>
+<p>我们可以通过以上简单的三步实现生成一个只属于自己的个人博客，是不是非常的心动呢？现在就跟着我一起来使用hugo搭建一个直属于自己的个人博客吧。</p>
+<h2 id="具体流程">具体流程</h2>
+<h3 id="安装hugo">安装hugo</h3>
+<p>首先需要特别说明的是，我是在Linux系统环境下安装的Hugo，不同的系统安装有不同的方法，此方法不一定适用于所有系统，如遇不适用，烦请各位自行搜索。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 安装hugo</span>
+sudo apt install hugo
+<span class="c1">#查看版本</span>
+hugo version
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>更新：需要注意的是，ubuntu22.04.2系统中安装hugo个人博客时使用该教程中的主题，只能使用<code>sudo apt install hugo</code>，不能使用deb包。</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image1.png"
+        title="image1" /></p>
+<h3 id="创建站点">创建站点</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 要存放文件路径下，例如我是在Docments创建的，因此我就要进入Docments</span>
+<span class="nb">cd</span> ~/Docments/Code <span class="se">\T</span>MP
+执行hugo创建文件夹的命令
+hugo new site qichenxiaoni
+进入刚刚创建好的文件夹中
+<span class="nb">cd</span> qichenxiaoni
+查看里面的文件
+ls
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image2.png"
+        title="image2" /></p>
+<p><strong>简单的介绍一下目录中的部分文件</strong>：</p>
+<p><strong>config.toml</strong> 是配置文件，在里面可以定义博客地址，构建配置，标题，导航栏等等。</p>
+<p><strong>themes</strong>是主题目录，可以下载喜欢的主题，然后配置在****config.toml****里面。</p>
+<p><strong>content</strong>是博客文章的目录。</p>
+<p><strong>static</strong>是博客的静态资源，比如图片</p>
+<p><strong>public</strong>是编译后的目标文件的目录。</p>
+<blockquote>
+<p>格外需要注意的是，现在我们进入的目录就是我们的根目录，里面存放的是你这个博客的所有源文件，也就是Markdown文件、模板文件以及配置文件和你所需要的图片。其次，最终呈现在网页上的不是你的Markdown文件，而是Markdown文件被编译生成的HTML文件，如果你使用F12打开开发人员模式就可以看到里面使用的CSS和JS部分。</p>
+</blockquote>
+<h3 id="设置主题">设置主题</h3>
+<p>在我们的博客正式运行之前，我们需要给博客设置一个主题，官方主题网站中有很多的主题文件。可以<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">点击此链接跳转</a>，在这里我使用的主题文件是<a href="https://github.com/olOwOlo/hugo-theme-even" target="_blank" rel="noopener noreffer "><del>Even</del></a>（后面我更改了主题，但是在这一系列的教程中还是使用的是Even）</p>
+<h4 id="安装主题">安装主题</h4>
+<p>需要特别注意的是，这时候我们是要在根目录下运行这行指令，也是要在站点目录下运行，例如我的站点就是qichenxiaoni，因此我要在qichenxiaoni这个路径下执行指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/olOwOlo/hugo-theme-even /themes/even
+如果你没有安装git命令可以先去安装git
+sudo apt install git
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>如果这时候你发现 git 的速度很慢或者是显示连接超时，可以在 git 前面加上一个 sudo，（此方法用于 Linux）如果还是不行，可以选择手动下载主题，然后复制到根目录下的 themes 目录中，不过可能会报‘WARN 2021/02/03 10:56:17 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;home&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.’，这时候我们需要重新 git clone 一下主题。</p>
+</blockquote>
+<h4 id="配置主题">配置主题</h4>
+<p>使用VSCode或者WebStorm等代码编辑器打开主题的<code>exampleSite</code>目录下找到一个名为<code>confiig.toml</code>配置文件，打开这个文件，将里面的内容都复制到你根目录下的<code>config.toml</code>文件中，然后根据注释进行修改自定义，下面是我做的一些简单修改，可以简单参考一下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>                             <span class="c"># en / zh-cn / ... (This field determines which i18n file to use)</span>
+<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;小陈的博客&#34;</span>
+
+<span class="p">[</span><span class="nx">author</span><span class="p">]</span>                  <span class="c"># essential                     # 必需</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Chen&#34;</span>
+
+<span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>                 <span class="c"># essential                     # 必需</span>
+  <span class="nx">changefreq</span> <span class="p">=</span> <span class="s2">&#34;weekly&#34;</span>
+  <span class="nx">priority</span> <span class="p">=</span> <span class="mf">0.5</span>
+  <span class="nx">filename</span> <span class="p">=</span> <span class="s2">&#34;sitemap.xml&#34;</span>
+
+<span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>             <span class="c"># config your menu              # 配置目录</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;主页&#34;</span>
+  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span>
+  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
+<span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;归档&#34;</span>
+  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
+  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/post/&#34;</span>
+<span class="p">==[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
+  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">30</span><span class="p">==</span>
+  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
+<span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;分类&#34;</span>
+  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">40</span>
+  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
+
+<span class="nx">logoTitle</span> <span class="p">=</span> <span class="s2">&#34;小陈的博客&#34;</span>        <span class="c"># default: the title value    # 默认值: 上面设置的title值</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>至此我们也就完成了基本的配置，此时的博客也已经初具雏形了，如果后续需要修改，也可以根据config.toml文件里面的注释进行修改，接下来我们需要尝试创建一个博客页面，来看看我们修改的最终成果如何。</p>
+<h4 id="创建第一篇博客">创建第一篇博客</h4>
+<p>使用以下命令创建出第一个个人博客内容页面吧</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new post/first-post.md
+</code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是，我们所有的markdown源文件都在根目录下的<code>content/post</code>下，不过post文件夹一般都不存在，因此我们在第一次创建的时候需要先创建这个文件夹，以后在创建新的博客时也需要加上这个文件夹，不然他不会创建到这个文件夹中的。</p>
+<blockquote>
+<p>当我们生成了新的 md 文件时，它会自动生成一些行，我们可以看到它的 draft 选项后面接的是 true，当它是 true 的时候是默认不渲染的，如果需要渲染的话，我们可以将 true 改成 false，这样就可以渲染了，但是我们在这里直接将 draft 选项注释掉，然后加上 markdown 语法就 OK 了。后续可以直接自己直接在编辑器里面。</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3.png"
+        title="image3" /></p>
+<p><strong>温馨提示：</strong> 如果我们需要在博客中插入图片的话，我们需要在static目录下创建存放图片的文件，一般会命名为image或是img。</p>
+<h4 id="发布博客">发布博客</h4>
+<p>当我们完成上述的操作之后，我们还缺一个步骤就可以完成啦，那就是将我们创建好的博客发布出去，那么怎么发布呢，我们只需要执行一句简单的命令就可以啦。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo server
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image4.png"
+        title="image4" /></p>
+<p>如果我们执行 <code>hugo server</code> 没有报错的话，就说明发布成功，我们就可以在浏览器中输入 <code>localshot:1313</code> 来查看我们的第一篇博客啦。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image5.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image5.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image5.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image5.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image5.png"
+        title="image5" /></p>
+<p>至此，个人博客就初步的搭建出来了，你也可以自己去尝试一下通过 config.toml 中的注释来修改一下主题的配置，例如将页面下面的图标改成自己需要的，不用担心需要重新启动 hugo，因为 hugo 是立即生效的。</p>
+<p>下一篇具体讲述如何将hugo博客托管到github pages中，为什么要托管到github pages的原因。</p>
+<p>&lt;全文完&gt;</p>
+<blockquote>
+<p>本文参考教程：<a href="https://leftpocket.cn/post/hugo/hugo_creation/" target="_blank" rel="noopener noreffer ">码农在新加坡的个人博客</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" data-title="从零开始搭建个人博客之使用hugo创建个人站点"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" data-title="从零开始搭建个人博客之使用hugo创建个人站点"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" data-title="从零开始搭建个人博客之使用hugo创建个人站点"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BD%BF%E7%94%A8hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%82%B9/" data-title="从零开始搭建个人博客之使用hugo创建个人站点"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" class="next" rel="next" title="从零开始搭建个人博客之hugo托管GitHubPages">从零开始搭建个人博客之hugo托管GitHubPages<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

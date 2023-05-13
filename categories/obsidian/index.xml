@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Obsidian - Category - 小陈的博客世界</title>
+        <link>http://example.org/categories/obsidian/</link>
+        <description>Obsidian - Category - 小陈的博客世界</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xxxx@gmail.com (Chen)</managingEditor>
+            <webMaster>xxxx@gmail.com (Chen)</webMaster><lastBuildDate>Mon, 10 Apr 2023 22:28:17 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/obsidian/" rel="self" type="application/rss+xml" /><item>
+    <title>Obsidian插件汉化</title>
+    <link>http://example.org/obsidian%E6%8F%92%E4%BB%B6%E6%B1%89%E5%8C%96/</link>
+    <pubDate>Mon, 10 Apr 2023 22:28:17 &#43;0800</pubDate>
+    <author>Chen</author>
+    <guid>http://example.org/obsidian%E6%8F%92%E4%BB%B6%E6%B1%89%E5%8C%96/</guid>
+    <description><![CDATA[前言 总所周知，obsidian是一款笔记软件，在我看来它最大的优点之一就是自定义性强，几乎可以说一千个人使用obsidian就有一千种不同的]]></description>
+</item>
+</channel>
+</rss>

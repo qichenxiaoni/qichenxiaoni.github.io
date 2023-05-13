@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>从零开始搭建个人博客之hugo部署Vercel - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="从零开始搭建个人博客之hugo部署Vercel" />
+<meta property="og:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T17:00:21+08:00" />
+<meta property="article:modified_time" content="2023-03-20T17:00:21+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="从零开始搭建个人博客之hugo部署Vercel"/>
+<meta name="twitter:description" content="前言 Hugo是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hug"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" /><link rel="prev" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" /><link rel="next" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从零开始搭建个人博客之hugo部署Vercel",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel\/"
+        },"genre": "posts","wordcount":  1940 ,
+        "url": "http:\/\/example.org\/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel\/","datePublished": "2023-03-20T17:00:21+08:00","dateModified": "2023-03-20T17:00:21+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">从零开始搭建个人博客之hugo部署Vercel</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hugo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>hugo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1940 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#整体流程">整体流程</a></li>
+    <li><a href="#具体流程">具体流程</a>
+      <ul>
+        <li><a href="#部署到-vercel">部署到 Vercel</a>
+          <ul>
+            <li><a href="#目标代码托管">目标代码托管</a></li>
+            <li><a href="#源文件托管-vercel">源文件托管 Vercel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo</a>是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hugo使用Go语言编写，因此它非常快。Hugo的主要优点是构建速度非常快，因为它是一个静态网站生成器，没有必要运行数据库或其他服务。</p>
+<p>使用Hugo创建个人博客的主要优势在于它非常快速、易于配置，并且生成的网站可以直接部署到任何Web服务器上，而不需要运行数据库或其他服务。此外，Hugo提供了大量的主题和插件，可以轻松地自定义您的个人博客。它还支持各种文本格式，包括Markdown，AsciiDoc和Org-mode，以及多种语言，包括中文。</p>
+<h2 id="整体流程">整体流程</h2>
+<ol>
+<li>写 Markdown 文件；</li>
+<li>通过hugo架构提供的语法将Markdown文件编译成html文件，html文件就是在浏览器中可以展示的文件;</li>
+<li>把编译出来的html文件发布到服务器或者网站托管平台;</li>
+</ol>
+<p>我们可以通过上面的三步生成一个只属于自己的个人博客，是不是非常的简单呢，那么，跟着我一起来使用hugo搭建一个属于自己的个人博客吧。</p>
+<h2 id="具体流程">具体流程</h2>
+<p>在上一篇文章中，我们已经将hugo博客部署到Github Pages中了，这一篇博客中我们来将博客部署到Vercel平台，这时可能会有人感到疑惑了，为什么弄到了GItHub Pages中还要再弄到Vercel中，这是因为github pages在国内有时候会访问不上，并且如果你想要让百度这一类的搜索引擎将你的博客收录的话，必须再弄一个托管平台，因为Github禁止百度抓取网页，那么什么是Vercel，Vercel的优势又是什么呢。</p>
+<p><a href="https://vercel.com/" target="_blank" rel="noopener noreffer ">Vercel</a>是一个创建高性能网站和应用程序的现代平台。它支持许多编程语言和框架，并提供了许多工具和服务来简化Web开发过程。Vercel的主要优势是快速部署和构建，自动缩放，安全性高，集成了很多有用的功能，如自动SSL和CDN。</p>
+<p>使用Vercel可以快速部署您的Hugo博客并获得许多有用的功能。例如，它提供了自动SSL，自动缩放和全球CDN，可以让您的网站访问速度更快，并提供更好的安全性。此外，您还可以获得有用的分析和监控工具，以了解您的网站的性能和使用情况。并且Vercel还支持一键导入Github、GItlab，十分的方便。</p>
+<h3 id="部署到-vercel">部署到 Vercel</h3>
+<h4 id="目标代码托管">目标代码托管</h4>
+<p>首先第一步，注册一个Vercel账号，这里我们直接使用 GitHub 账号进行登录，因为这样方便导入仓库。</p>
+<p>第二步，我们新建一个项目</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-1.png"
+        title="image3-1" /></p>
+<p>导入 git 仓库，可以选择导入所有仓库</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-2.png"
+        title="image3-2" /></p>
+<p>选择目标文件仓库，点击 Import</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-3.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-3.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-3.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-3.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-3.png"
+        title="image3-3" /></p>
+<p>FRAMEWORK PRESET 选Other (因为目标文件是没有框架的)，查看无误之后点击Deploy</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-4.png"
+        title="image3-4" /></p>
+<p>点击Deploy之后需要等待一下，因为它会自动检查有没有存在错误，如果没有存在错误，你就可以看到彩带烟花！</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-5.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-5.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-5.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-5.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-5.png"
+        title="image3-5" /></p>
+<p>至此，我们就完成了将目标代码托管到Vercel的操作，当然我们也可以将源代码也托管给Vercel一份，操作也是十分的简单。</p>
+<h4 id="源文件托管-vercel">源文件托管 Vercel</h4>
+<p>源码托管需要注意几点：</p>
+<p>源代码需要发布到Github上。</p>
+<p>public目录不能发布。（添加到 .gitignore上）</p>
+<p>主题如果是从github下载下来的，子目录里面会有 <code>.git</code> 文件，发布代码的话，内层目录是不能有<code>.git</code>的，它会识别成另一个git仓库并忽略上传，只上传一个软链接文件。所以需要删除themes主题下面的<code>.git</code>文件，否则 Vercel 无法从 github上拉取到主题，编译会失败。</p>
+<p>前面的步骤是一样的，同样的选择创建新项目，选择自己需要导入的项目仓库。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-6.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-6.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-6.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-6.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-6.png"
+        title="image3-6" /></p>
+<p>但是里面的设置存在差异，需要我们更改一些地方。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-7.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-7.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-7.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-7.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-7.png"
+        title="image3-7" /></p>
+<p>如果在构建当中出现问题，解决方法如下：</p>
+<p>当我们看到这个的时候，</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-8.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-8.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-8.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-8.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-8.png"
+        title="image3-8" /></p>
+<p>就说明我们的主题是没有发布到自己的Github中的，只是一个软链接，所以需要我们去themes目录，如果还是没有变动需要提交，重命名even提交，然后再改回来，就可以正常提交了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#到根目录（/Document/qichenxiaoni）</span>
+rm -rf .git
+进入themes文件夹 
+mv even even1 
+git status 
+git add * 
+git commit -m <span class="s2">&#34;mv&#34;</span> 
+git push 
+
+mv even1 even 
+git status 
+git add * 
+git commit -m <span class="s2">&#34;mv&#34;</span> git push
+</code></pre></td></tr></table>
+</div>
+</div><p>如果出现以下问题，是因为public文件已经存在，Vercel没有办法编译成目标文件，需要我们将public删除并忽略public文件提交到Github中。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-9.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-9.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-9.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-9.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-9.png"
+        title="image3-9" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mv public public2 
+git add public public2 
+git commit -m <span class="s2">&#34;mv&#34;</span> 
+git push 
+
+<span class="nb">echo</span> <span class="s1">&#39;public&#39;</span>&gt;&gt;.gitignore 
+mv public2 public 
+git add public2 
+git commit -m <span class="s2">&#34;gitignore&#34;</span> 
+git push
+</code></pre></td></tr></table>
+</div>
+</div><p>如果出现<code>Error：Command &quot;hugo&quot; exited with 255</code>的话，需要我们将BUILD COMMAND将hugo改成hugo -D &ndash;gc</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-10.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-10.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-10.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-10.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-10.png"
+        title="image3-10" /></p>
+<p>进入代码托管的页面，如果左边的小窗口显示正常，就说明发布成功，则点击Visit</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-11.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-11.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-11.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-11.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-11.png"
+        title="image3-11" /></p>
+<p>如果地址栏显示如这样，就说明发布成功，同样，我们可以看到Vercel给我们自动分配了一个域名。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-12.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-12.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-12.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-12.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image3-12.png"
+        title="image3-12" /></p>
+<p>至此我们就完成将文件托管到Vercel的全部操作。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文参考教程：<a href="https://www.leftpocket.cn/post/hugo/hugo_vercel/" target="_blank" rel="noopener noreffer ">码农在新加坡的个人博客</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" data-title="从零开始搭建个人博客之hugo部署Vercel"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" data-title="从零开始搭建个人博客之hugo部署Vercel"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" data-title="从零开始搭建个人博客之hugo部署Vercel"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E9%83%A8%E7%BD%B2vercel/" data-title="从零开始搭建个人博客之hugo部署Vercel"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8Bhugo%E6%89%98%E7%AE%A1githubpages/" class="prev" rel="prev" title="从零开始搭建个人博客之hugo托管GitHubPages"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>从零开始搭建个人博客之hugo托管GitHubPages</a>
+            <a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" class="next" rel="next" title="从零开始搭建个人博客之绑定域名">从零开始搭建个人博客之绑定域名<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

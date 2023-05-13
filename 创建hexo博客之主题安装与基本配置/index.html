@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>创建Hexo博客之主题安装与基本配置 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="创建Hexo博客之主题安装与基本配置" />
+<meta property="og:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T21:50:18+08:00" />
+<meta property="article:modified_time" content="2023-04-19T21:50:18+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="创建Hexo博客之主题安装与基本配置"/>
+<meta name="twitter:description" content="前言 Hexo是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。 Hexo的主要特征包括以下几点： 快"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" /><link rel="prev" href="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "创建Hexo博客之主题安装与基本配置",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE\/"
+        },"genre": "posts","wordcount":  3207 ,
+        "url": "http:\/\/example.org\/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE\/","datePublished": "2023-04-19T21:50:18+08:00","dateModified": "2023-04-19T21:50:18+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">创建Hexo博客之主题安装与基本配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hexo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hexo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3207 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#安装主题">安装主题</a>
+      <ul>
+        <li><a href="#升级建议">升级建议</a></li>
+      </ul>
+    </li>
+    <li><a href="#基本配置">基本配置</a>
+      <ul>
+        <li><a href="#创建基本页面">创建基本页面</a>
+          <ul>
+            <li><a href="#创建标签页">创建标签页</a></li>
+            <li><a href="#创建分类页">创建分类页</a></li>
+            <li><a href="#创建友情链接">创建友情链接</a>
+              <ul>
+                <li><a href="#添加友情链接">添加友情链接</a></li>
+              </ul>
+            </li>
+            <li><a href="#创建404页面">创建404页面</a></li>
+            <li><a href="#最后">最后</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener noreffer ">Hexo</a>是一款基于Node.js的静态博客生成器。他可以帮助用户快速、轻松地创建并部署自己的博客网站。</p>
+<p>Hexo的主要特征包括以下几点：</p>
+<ol>
+<li>快速：Hexo采用了缓存机制和异步渲染技术，生成速度非常快；</li>
+<li>简单易用：Hexo的配置非常简单，它支持大量的<a href="https://hexo.io/themes/" target="_blank" rel="noopener noreffer ">主题</a>和<a href="https://hexo.io/plugins/" target="_blank" rel="noopener noreffer ">插件</a>，使得用户可以快速打造自己的个性化博客；</li>
+<li>Markdown支持： Hexo支持使用Markdown语法来编写文章，并且可以直接在命令行界面预览效果；</li>
+<li>多平台支持：Hexo可以发布到多种平台，例如：Github Pages、HeroKu以及Netlity等等；</li>
+<li>插件丰富：Hexo有大量的插件可以供选择，如SEO优化、社交分享等，可以很大程度上满足用户的各种需求；</li>
+</ol>
+<p>总而言之，Hexo是一款非常优秀的博客生成器，它能够让用户快速地创建自己的博客网站，并提供了十分丰富的主题和插件来满足用户的需求。</p>
+<h2 id="安装主题">安装主题</h2>
+<p>本项目中安装的Hexo主题是butterfly，首先我们去<a href="https://hexo.io/themes/" target="_blank" rel="noopener noreffer ">hexo官方主题页面</a>，搜索我们想要的主题并点击，或者如果主题在github上有仓库，那么我们可以github上搜索<code>hexo-theme</code>，找到心仪的主题。</p>
+<p>butterfly主题给出了三种不同的安装，分别是从github仓库中克隆、从gitee仓库中克隆以及使用npm方法进行安装。</p>
+<p>在这里我使用的是npm安装方法，需要注意的是，使用npm安装必须要求在前面安装时Hexo的安装版本必须在5.0.0以上，同时使用npm安装，不会在根目录下的themes文件夹中生成主题文件夹，主题会被放在<code>node_modules</code>中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">npm install hexo-theme-butterfly
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>升级的方法是在根目录下执行<code>npm update hexo-theme-butterfly</code>，同时，建议去github中的Releases或者主题文档中的文档七查看最新版的更新内容，里面有标注<code>_config</code>文件的变更内容，如果有标注，则根据实际情况进行更新配置。</p>
+</blockquote>
+<p>当我们安装好主题之后，接下来就是需要应用主题，直接进入根目录下的<code>_config.yml</code>文件中，找到<code>theme</code>，将默认的landscape更改为butterfly即可。</p>
+<p>这个时候我们就已经完成了主题的安装和应用，但是由于这个主题需要pug和stylus的渲染器，不确定我们有没有，所以执行安装这两个插件的命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">npm install hexo-renderer-pug hexo-renderer-stylus --save
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="升级建议">升级建议</h3>
+<p>为了减少主题升级之后带来的不方便，因此我们可以在根目录下创建一个<code>_config.butterfly.yml</code>文件，并且将主题文件夹中的<code>_config.yml</code>文件里面的内容复制一份到刚刚创建好的<code>_config.butterfly.yml</code>文件内（<strong>注意：是到<code>node_modules</code>文件夹的主题文件夹中，复制里面的<code>_config.yml</code>文件内容，而不是外面的<code>_config.yml</code>文件内容，粘贴到外面的<code>_config.butterfly.yml</code></strong>）</p>
+<blockquote>
+<p>需要注意的是，不能将主题文件夹中的<code>_config.yml</code>文件删除，然后以后更改内容也只需要在<code>_config.butterfly.yml</code>文件中修改配置即可。</p>
+</blockquote>
+<h2 id="基本配置">基本配置</h2>
+<h3 id="创建基本页面">创建基本页面</h3>
+<h4 id="创建标签页">创建标签页</h4>
+<p>进入博客根目录下，打开终端，输入<code>hexo new page tags</code>命令，找到<code>source/tags/index.md</code>，修改里面的内容，<strong>切记一定要在Front-matter里面添加<code>type: &quot;tags&quot;</code></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">小陈的标签页 </span><span class="w"> </span><span class="c"># 这个可以随意修改名字</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2023-04-14 20:54:26</span><span class="w">
+</span><span class="w"></span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;tage&#34;</span><span class="w">  </span><span class="c"># 这个要添加</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="创建分类页">创建分类页</h4>
+<p>进入博客根目录下，打开终端，输入<code>hexo new page categories</code>命令，找到<code>source/categories/index.md</code>，修改里面的内容，<strong>切记一定要在Front-matter里面添加<code>type: &quot;categories&quot;</code></strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">我们终会遇见美好 </span><span class="w"> </span><span class="c"># 这个可以随意修改名字</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2023-04-14 20:55:27</span><span class="w">
+</span><span class="w"></span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;categories&#34;</span><span class="w">    </span><span class="c"># 这个要添加</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="创建友情链接">创建友情链接</h4>
+<p>进入博客根目录下，打开终端，输入<code>hexo new page link</code>命令，找到<code>source/link/index.md</code>，修改里面的内容，<strong>切记一定要在Front-matter里面添加<code>type: &quot;link&quot;</code></strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">小陈的朋友们   </span><span class="w"> </span><span class="c"># 这个可以随意修改名字</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2023-04-14 20:55:56</span><span class="w">
+</span><span class="w"></span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;link&#34;</span><span class="w">    </span><span class="c"># 这个要添加</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h5 id="添加友情链接">添加友情链接</h5>
+<p>有了友情链接的页面，就需要添加一些友链，那么怎么去添加呢，一共有两种方法，一种是本地生成的。这种方法就需要你在根目录下的<code>source/_data</code>文件夹中创建一个<code>link.yml</code>文件，（如果没有<code>_data</code>文件夹，请自行创建一个，切记data前面是下划线'_'，不是'-'），可以先复制官方文档中的内容，后期再进行修改或添加。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml">- <span class="nt">class_name</span><span class="p">:</span><span class="w"> </span><span class="l">友情链接</span><span class="w">
+</span><span class="w">  </span><span class="nt">class_desc</span><span class="p">:</span><span class="w"> </span><span class="l">那些人，那些事</span><span class="w">
+</span><span class="w">  </span><span class="nt">link_list</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Hexo</span><span class="w">
+</span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://hexo.io/zh-tw/</span><span class="w">
+</span><span class="w">      </span><span class="nt">avatar</span><span class="p">:</span><span class="w"> </span><span class="l">https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg</span><span class="w">
+</span><span class="w">      </span><span class="nt">descr</span><span class="p">:</span><span class="w"> </span><span class="l">快速、简单且强大的网志框架</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="nt">class_name</span><span class="p">:</span><span class="w"> </span><span class="l">网站</span><span class="w">
+</span><span class="w">  </span><span class="nt">class_desc</span><span class="p">:</span><span class="w"> </span><span class="l">值得推荐的网站</span><span class="w">
+</span><span class="w">  </span><span class="nt">link_list</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Youtube</span><span class="w">
+</span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://www.youtube.com/</span><span class="w">
+</span><span class="w">      </span><span class="nt">avatar</span><span class="p">:</span><span class="w"> </span><span class="l">https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png</span><span class="w">
+</span><span class="w">      </span><span class="nt">descr</span><span class="p">:</span><span class="w"> </span><span class="l">视频网站</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Weibo</span><span class="w">
+</span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://www.weibo.com/</span><span class="w">
+</span><span class="w">      </span><span class="nt">avatar</span><span class="p">:</span><span class="w"> </span><span class="l">https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png</span><span class="w">
+</span><span class="w">      </span><span class="nt">descr</span><span class="p">:</span><span class="w"> </span><span class="l">中国最大社交分享平台</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Twitter</span><span class="w">
+</span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://twitter.com/</span><span class="w">
+</span><span class="w">      </span><span class="nt">avatar</span><span class="p">:</span><span class="w"> </span><span class="l">https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png</span><span class="w">
+</span><span class="w">      </span><span class="nt">descr</span><span class="p">:</span><span class="w"> </span><span class="l">社交分享平台</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>第二种方法是远程拉取，该方法是从4.0.0以后，就支持远程拉取了，需要注意的是，如果远程拉取加载成功之后，本地生产的就失效了，并且远程拉取支持的格式仅仅只有<code>json</code>。</p>
+<p>如果需要远程拉取，则需要在 source/link/index.md 这个文件的 front-matter 添加远程链接，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">flink_url: xxxxx # json文件的位置
+</code></pre></td></tr></table>
+</div>
+</div><p>下面是官方文档中关于远程拉取的json文件模板</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&#34;class_name&#34;</span><span class="p">:</span> <span class="s2">&#34;友情链接&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;class_desc&#34;</span><span class="p">:</span> <span class="s2">&#34;那些人，那些事&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;link_list&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Hexo&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;link&#34;</span><span class="p">:</span> <span class="s2">&#34;https://hexo.io/zh-tw/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;avatar&#34;</span><span class="p">:</span> <span class="s2">&#34;https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;descr&#34;</span><span class="p">:</span> <span class="s2">&#34;快速、简单且强大的网志框架&#34;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&#34;class_name&#34;</span><span class="p">:</span> <span class="s2">&#34;网站&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;class_desc&#34;</span><span class="p">:</span> <span class="s2">&#34;值得推荐的网站&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;link_list&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Youtube&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;link&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.youtube.com/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;avatar&#34;</span><span class="p">:</span> <span class="s2">&#34;https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;descr&#34;</span><span class="p">:</span> <span class="s2">&#34;视频网站&#34;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Weibo&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;link&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.weibo.com/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;avatar&#34;</span><span class="p">:</span> <span class="s2">&#34;https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;descr&#34;</span><span class="p">:</span> <span class="s2">&#34;中国最大社交分享平台&#34;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Twitter&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;link&#34;</span><span class="p">:</span> <span class="s2">&#34;https://twitter.com/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;avatar&#34;</span><span class="p">:</span> <span class="s2">&#34;https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;descr&#34;</span><span class="p">:</span> <span class="s2">&#34;社交分享平台&#34;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="创建404页面">创建404页面</h4>
+<p>主题中内置了一个简单的404界面，我们可以在设置中搜索开启</p>
+<blockquote>
+<p>需要额外注意的是，在本地预览时，如果我们访问出错了的网站是不会自动跳转到404页面的，如果想在本地预览时查看404页面的效果，需要访问<code>http://localhost:4000/404.html</code>。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># A simple 404 page
+error_404:
+  enable: true
+  subtitle: &#39;不好意思，页面走丢啦&#39;  # 这个可以自由编辑
+  background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/404%E9%A1%B5%E9%9D%A2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/404%E9%A1%B5%E9%9D%A2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/404%E9%A1%B5%E9%9D%A2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/404%E9%A1%B5%E9%9D%A2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse/Hexoimage/404%E9%A1%B5%E9%9D%A2.png"
+        title="404页面" /></p>
+<h4 id="最后">最后</h4>
+<p>官方文档中还提到了添加图库以及子页面的方法，但是由于我暂时用不上，因此在这里没有配置这一项，如果有需要的，可以访问<a href="https://butterfly.js.org/posts/dc584b87/#404%E9%A0%81%E9%9D%A2" target="_blank" rel="noopener noreffer ">官方文档</a>，根据文档中的教程一步一步配置。</p>
+<h2 id="总结">总结</h2>
+<p>至此，我们就已经完成hexo主题的下载更换以及一些基本配置，下面我们就针对主题进行更深入的修改配置。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本篇文章参考<a href="https://butterfly.js.org/posts/dc584b87/" target="_blank" rel="noopener noreffer ">官方文档</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-title="创建Hexo博客之主题安装与基本配置"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-title="创建Hexo博客之主题安装与基本配置"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-title="创建Hexo博客之主题安装与基本配置"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-title="创建Hexo博客之主题安装与基本配置"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%88%9B%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8Bhexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE2/" class="prev" rel="prev" title="创建Hexo博客之Hexo主题配置2"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>创建Hexo博客之Hexo主题配置2</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

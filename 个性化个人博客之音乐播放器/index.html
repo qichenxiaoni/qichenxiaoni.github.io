@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>个性化个人博客之音乐播放器 - 小陈的博客世界</title><meta name="Description" content="欢迎来到博客空间"><meta property="og:title" content="个性化个人博客之音乐播放器" />
+<meta property="og:description" content="前言 我们创建好个人博客之后，或许我们会觉得只是纯文本阅读太过于的单调了，如果这时候可以有音乐播放就更好了，如果你有这方面的需求，那么就请跟我" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" /><meta property="og:image" content="http://example.org/images/image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T17:43:45+08:00" />
+<meta property="article:modified_time" content="2023-03-20T17:43:45+08:00" /><meta property="og:site_name" content="小陈的博客世界" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/images/image.jpg"/>
+
+<meta name="twitter:title" content="个性化个人博客之音乐播放器"/>
+<meta name="twitter:description" content="前言 我们创建好个人博客之后，或许我们会觉得只是纯文本阅读太过于的单调了，如果这时候可以有音乐播放就更好了，如果你有这方面的需求，那么就请跟我"/>
+<meta name="application-name" content="小陈的博客">
+<meta name="apple-mobile-web-app-title" content="小陈的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" /><link rel="prev" href="http://example.org/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" /><link rel="next" href="http://example.org/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "个性化个人博客之音乐播放器",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8\/"
+        },"genre": "posts","wordcount":  3133 ,
+        "url": "http:\/\/example.org\/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8\/","datePublished": "2023-03-20T17:43:45+08:00","dateModified": "2023-03-20T17:43:45+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Chen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="小陈的博客世界">小陈的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="小陈的博客世界">小陈的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">个性化个人博客之音乐播放器</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Chen</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hugo/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>hugo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3133 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#具体流程">具体流程</a>
+      <ul>
+        <li><a href="#第一种方法">第一种方法</a>
+          <ul>
+            <li><a href="#如何更换歌曲">如何更换歌曲</a></li>
+            <li><a href="#获取歌曲id">获取歌曲ID</a></li>
+            <li><a href="#实现效果图">实现效果图</a></li>
+          </ul>
+        </li>
+        <li><a href="#第二种方法">第二种方法</a>
+          <ul>
+            <li><a href="#如何获取lrc歌词">如何获取lrc歌词</a></li>
+            <li><a href="#实现效果图-1">实现效果图</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三种方法">第三种方法</a>
+          <ul>
+            <li><a href="#实现效果图-2">实现效果图</a>
+              <ul>
+                <li><a href="#歌单">歌单</a></li>
+                <li><a href="#单曲">单曲</a></li>
+                <li><a href="#专辑">专辑</a></li>
+                <li><a href="#搜索关键词">搜索关键词</a></li>
+                <li><a href="#歌手">歌手</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>我们创建好个人博客之后，或许我们会觉得只是纯文本阅读太过于的单调了，如果这时候可以有音乐播放就更好了，如果你有这方面的需求，那么就请跟我一起来进行简单的代码来实现这个需求吧。</p>
+<blockquote>
+<p>本文博客是基于hugo搭建，不确保是否支持其他类型的，例如hexo。</p>
+</blockquote>
+<h2 id="具体流程">具体流程</h2>
+<h3 id="第一种方法">第一种方法</h3>
+<p>首先声明该方法不能实现音乐播放器一直显示在页面上，只有滑动到特定区域才可以显示出来，例如我将其插入博客页面的最底部，那么该播放器也只会出现在底部，不会出现在其他的地方。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;no&#34;</span> <span class="na">border</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">marginwidth</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">marginheight</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">330</span> <span class="na">height</span><span class="o">=</span><span class="s">110</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;//
+</span><span class="s">music.163.com/outchain/player?type=0&amp;id=2896870368&amp;auto=1&amp;height=90&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>特别提醒的是，我们可以根据实际情况修改width和height的值，如果当你出现播放器与侧边栏的菜单图片有冲突的话，可以考虑将<code>border</code>的参数删除试试。</p>
+</blockquote>
+<h4 id="如何更换歌曲">如何更换歌曲</h4>
+<p>更改歌曲只需要将代码中的<code>music.163.com/outchain/player?type=0&amp;id=2896870368</code>后面的数字<code>2896870368</code>换成你自己的id。</p>
+<h4 id="获取歌曲id">获取歌曲ID</h4>
+<p>如何找到这个id，需要你进入网易云官网，搜相关的歌曲，截取<code>playlist?id</code>后面的数值</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-1.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-1.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-1.png"
+        title="image8-1" /></p>
+<blockquote>
+<p>此方法不适用添加单独的歌曲！！！</p>
+</blockquote>
+<h4 id="实现效果图">实现效果图</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-2.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-2.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-2.png"
+        title="image8-2" /></p>
+<h3 id="第二种方法">第二种方法</h3>
+<p>首先声明该方法是在博客的底部添加音乐组件，并且可以自定是否自动播放和是否开启歌词功能以及是否固定在左下角不动。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- 为博客底部添加音乐组件 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;player&#34;</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;aplayer&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://files.cnblogs.com/files/shwee/APlayer.min_v1.10.1.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://files.cnblogs.com/files/shwee/APlayer.min_v1.10.1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> 
+ 
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+<span class="kd">var</span> <span class="nx">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">APlayer</span><span class="p">({</span>
+    <span class="nx">element</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;player&#39;</span><span class="p">),</span>
+    <span class="nx">narrow</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">autoplay</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>          <span class="c">&lt;!--</span> <span class="nx">是否自动播放</span> <span class="o">--&gt;</span>
+    <span class="nx">showlrc</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c">&lt;!--</span><span class="nx">是否开启歌词功能</span> <span class="err">，</span><span class="nx">默认false</span><span class="err">（</span><span class="nx">为true时musics集合中需要传入lrc字段</span><span class="err">。）</span><span class="o">--&gt;</span>
+    <span class="nx">fixed</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="c">&lt;!--</span> <span class="nx">是否固定在左下角不动</span><span class="err">，</span> <span class="mi">1</span><span class="nx">即为true</span> <span class="o">--&gt;</span>
+    <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;#F5F5F5&#39;</span><span class="p">,</span>      <span class="c">&lt;!--</span> <span class="nx">插件背景颜色</span><span class="err">，</span><span class="nx">建议和你的公告栏背景色一样</span><span class="err">，</span><span class="nx">这样融为一体的感觉</span> <span class="o">--&gt;</span>
+    <span class="nx">music</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;那些花儿&#39;</span><span class="p">,</span>
+            <span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;朴树&#39;</span><span class="p">,</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://music.163.com/song/media/outer/url?id=28996922.mp3&#39;</span><span class="p">,</span>
+            <span class="nx">cover</span><span class="o">:</span> <span class="s2">&#34;http://p2.music.126.net/j1EJGPJ0WaudM0DBSDCY8w==/109951168111041972.jpg&#34;</span><span class="p">,</span>
+            <span class="nx">lrc</span><span class="o">:</span><span class="s2">&#34;[00:00.000] 作词 : 朴树[00:01.000] 作曲 : 朴树[00:17.36]那片笑声让我想起[00:20.72]我的那些花儿[00:24.38]在我生命每个角落[00:28.21]静静为我开着[00:32.21]我曾以为我会永远[00:36.01]守在她身旁[00:40.11]今天我们已经离去[00:43.85]在人海茫茫[00:47.08]她们都老了吧?[00:50.76]她们在哪里呀?[00:55.23]幸运的是我[00:58.83]曾陪她们开放[01:02.99]啦.....想她[01:10.67]啦.....她还在开吗?[01:18.43]啦.....去呀[01:26.38]她们已经被风吹走[01:30.12]散落在天涯[01:33.22][01:49.61]有些故事还没讲完[01:53.47]那就算了吧[01:57.16]那些心情在岁月中[02:01.06]已经难辨真假[02:05.21]如今这里荒草丛生[02:09.06]没有了鲜花[02:13.04]好在曾经拥有你们的春秋和冬夏[02:20.29]她们都老了吧?[02:23.85]她们在哪里呀?[02:28.54]幸运的是我曾陪她们开放[02:35.83]啦.....想她[02:43.54]啦.....她还在开吗?[02:51.28]啦.....去呀[02:59.42]她们已经被风带走[03:03.20]散落在天涯[03:06.82]啦……[03:14.54]啦……[03:22.42]啦……[03:30.02]……[04:01.98]人们就像被风吹走插在了天涯[04:08.66]她们都老了吧?[04:12.26]她们还在开吗？[04:16.74]我们就这样[04:20.74]各自奔天涯[04:25.16]&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">});</span>
+<span class="nx">ap</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>使用该方法添加音乐的方法跟上面是一样的，也是获取歌曲的ID，需要注意的是该方法是不适用添加歌单的。</p>
+</blockquote>
+<h4 id="如何获取lrc歌词">如何获取lrc歌词</h4>
+<p>获取lrc歌词的方法有很多，在这里我推荐两种获取的方法，第一种打开浏览器进入这个网页<a href="http://music.163.com/api/song/media?id=" target="_blank" rel="noopener noreffer ">lrc歌词获取</a>，将我们需要获取lrc歌词的歌曲ID复制进去，就像这样。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-9.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-9.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-9.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-9.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-9.png"
+        title="image8-9" /></p>
+<p>另外一种就是到这个网址<a href="http://lrc.opqnext.com/" target="_blank" rel="noopener noreffer ">lrc歌词编辑器</a>里面去搜索，这里面的所有数据均是来自于网易云。</p>
+<h4 id="实现效果图-1">实现效果图</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-3.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-3.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-3.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-3.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-3.png"
+        title="image8-3" /></p>
+<h3 id="第三种方法">第三种方法</h3>
+<p>首先声明该方法功能强大，适用多种模式，并且自动识别歌词，不需要我们手动添加lrc歌词了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">link</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css&#34;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://files.cnblogs.com/files/wkfvawl/APlayer.min.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;aplayer&#34;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;aplayer&#34;</span>  <span class="nx">data</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">&#34;7008690471&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">server</span><span class="o">=</span><span class="s2">&#34;netease&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">&#34;playlist&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">fixed</span><span class="o">=</span><span class="s2">&#34;true&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">listfolded</span><span class="o">=</span><span class="s2">&#34;true&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">order</span><span class="o">=</span><span class="s2">&#34;random&#34;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">theme</span><span class="o">=</span><span class="s2">&#34;#F58EA8&#34;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://unpkg.com/meting@1.2/dist/Meting.min.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>需要注意的是，如果你复制上面的这一串代码，但是没有在博客左下角显示的话，建议修改<code>data-id</code>的值。如果你想根据下面的代码进行自定义，需要在前面加上<code>data-</code>，例如实现自动播放，需要写成<code>data-autoplay=&quot;true&quot;</code>。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">一些参数
+    mini: false, //迷你模式
+    autoplay: false, //自动播放
+    theme: &#39;#FADFA3&#39;, //主题色
+    loop: &#39;all&#39;, //音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环
+    order: &#39;random&#39;, //音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环
+    preload: &#39;auto&#39;, //预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    listFolded: false, //列表默认折叠
+    listMaxHeight: 90, //列表最大高度
+    lrcType: 3, //歌词传递方式
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>想要自动播放的话，就添加data-autoplay=&ldquo;true&quot;到第三行代码div后面，同时<code>server </code>可选 netease（网易云音乐），tencent（QQ 音乐），kugou（酷狗音乐）。<code>type</code>可选 song（歌曲），playlist（歌单），album（专辑），search（搜索关键字），artist（歌手）;</p>
+</blockquote>
+<h4 id="实现效果图-2">实现效果图</h4>
+<h5 id="歌单">歌单</h5>
+<p>如果想要设置歌单播放的话，只需要修改第三行div中的<code>data-type</code>为<code>&quot;playlist&quot;</code>即可，同时记得修改<code>data-id</code>的参数为你自己歌单的ID，获取ID的方法跟前面的一样。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-4.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-4.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-4.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-4.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-4.png"
+        title="image8-4" /></p>
+<h5 id="单曲">单曲</h5>
+<p>如果想要自己设置歌曲播放的话，只需要修改第三行div中的<code>data-type</code>为<code>&quot;song&quot;</code>即可，同时记得修改<code>data-id</code>的参数为你想要的歌曲的ID，获取ID的方法跟前面的一样。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-5.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-5.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-5.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-5.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-5.png"
+        title="image8-5" /></p>
+<h5 id="专辑">专辑</h5>
+<p>如果想要设置专辑播放的话，只需要修改第三行div中的<code>data-type</code>为<code>&quot;album&quot;</code>即可，同时记得修改<code>data-id</code>的参数为你想要的专辑的ID，获取ID的方法跟前面的一样。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-6.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-6.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-6.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-6.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-6.png"
+        title="image8-6" /></p>
+<h5 id="搜索关键词">搜索关键词</h5>
+<p>如果想要设置搜索关键词播放的话，只需要修改第三行div中的<code>data-type</code>为<code>&quot;search&quot;</code>即可，同时记得修改<code>data-id</code>的参数为你想要的搜索的关键词，例如想要搜索<code>空空</code>，就只需要将<code>空空</code>放进<code>data-id</code>中即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-7.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-7.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-7.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-7.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-7.png"
+        title="image8-7" /></p>
+<h5 id="歌手">歌手</h5>
+<p>如果想要听某一位歌手的全部音乐，需要修改第三行div中的<code>data-type</code>为<code>&quot;artist&quot;</code>即可，同时记得修改<code>data-id</code>的参数为歌手的ID，获取歌手ID的方式跟前面的差不多，只是需要我们点进歌手的主页，复制<code>artist?id</code>后面的数值即可实现。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-8.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-8.png, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-8.png 1.5x, https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-8.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/qichenxiaoni/Picture-warehouse@main/img/image8-8.png"
+        title="image8-8" /></p>
+<blockquote>
+<p>网易云音乐支持以上五种不同的方式，酷狗支持搜索关键词，建议使用网易云，同时提醒不管使用任何音乐平台，都存在VIP歌曲无法听的现象或者是VIP歌曲只能听60S。</p>
+</blockquote>
+<h3 id="总结">总结</h3>
+<p>上面三种不同的方法都可以实现博客音乐播放器，但他们效果、样式以及使用效果各有不同，按需使用，不管歌单还是歌曲尽量使用网易云音乐，因为网易云音乐的id没有被隐藏，其他例如QQ音乐和酷狗音乐的歌曲id被隐藏了。</p>
+<p>&lt;本文完&gt;</p>
+<blockquote>
+<p>本文参考<a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener noreffer ">官方教程</a>，以及<a href="https://blog.csdn.net/q1246192888/article/details/111409908" target="_blank" rel="noopener noreffer ">博客园添加背景音乐以及播放器 或在左下方固定位置添加音乐播放器 给你的博文锦上添花，增姿添彩</a></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" data-title="个性化个人博客之音乐播放器"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" data-title="个性化个人博客之音乐播放器"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" data-title="个性化个人博客之音乐播放器"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" data-title="个性化个人博客之音乐播放器"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" class="prev" rel="prev" title="从零开始搭建个人博客之绑定域名"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>从零开始搭建个人博客之绑定域名</a>
+            <a href="/notion%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" class="next" rel="next" title="Notion创建个人博客之创建个人主页">Notion创建个人博客之创建个人主页<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Xiao Chen wants to learn</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Chen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
